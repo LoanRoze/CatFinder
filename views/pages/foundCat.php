@@ -5,7 +5,7 @@
       <div class="card">
         <img class="image-article"><?= $article["image_url"] ?></img>
         <p><?= $article["description"] ?></p>
-        <p class="location"><?= $article["ville"] ?></p>
+        <p class="location"><?= $article["localisation"] ?></p>
         <p>Publié le <?= $article["published_at"] ?></p>
         <button>Contacter</button>
         <div>

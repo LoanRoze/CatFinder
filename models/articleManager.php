@@ -8,7 +8,8 @@ function new_lost_cat($post): bool {
     if (!empty($post)) {
         $mysqli = dbConnect();
         
-        $now = new DateTime();
+        $now = date_format(new DateTime(), "Y-m-d");
+        var_dump($now);
         
         $insertRequest = "INSERT INTO PostLostCat (nom, image_url, description, ville, id_utilisateur, published_at) VALUES 
         (?, ?, ?, ?, ?, ?)";
@@ -17,7 +18,7 @@ function new_lost_cat($post): bool {
         if ($stmt === false) {
             die("Erreur lors de la préparation de la requête : " . $mysqli->error);
         }
-        $stmt->bind_param("ssssid", 
+        $stmt->bind_param("ssssis", 
             $post['nom'], 
             $post['image_url'], 
             $post['description'], 
@@ -25,6 +26,7 @@ function new_lost_cat($post): bool {
             $post['id_utilisateur'], 
             $now
         );  
+        var_dump($stmt);
         return $stmt->execute();
     }
     return false;
