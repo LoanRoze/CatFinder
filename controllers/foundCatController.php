@@ -1,6 +1,6 @@
 <?php
 
 $template = 'views/pages/foundCat.php';
-require('models/connections.php');
+require('models/articleManager.php');
 
-var_dump(dbConnect());
+var_dump(getLastArticles(2));

@@ -28,12 +28,28 @@ function new_article($post): bool {
 
     // Last
 function getLastArticles(int $limit): array {
-    $sql = 'SELECT title, description, content, published_at, id
-            FROM articles ORDER BY published_at DESC LIMIT :limit';
-    $query = dbConnect()->prepare(query: $sql);
-    $query->bindParam(param: ":limit", var: $limit, type: PDO::PARAM_INT);
-    $query->execute();
-    return $query->fetchAll();
+    $mysqli = dbConnect();
+
+    $sql = "SELECT * FROM PostLostCat LIMIT ?";
+    $stmt = $mysqli->prepare($sql);
+    
+    if ($stmt === false) {
+        die("Erreur lors de la préparation de la requête : " . $mysqli->error);
+    }
+
+    $stmt->bind_param("i", $limit);  
+    $stmt->execute();
+    $result = $stmt->get_result(); 
+
+    $posts = [];
+    while ($row = $result->fetch_assoc()) {
+        $posts[] = $row; 
+    }
+
+    $stmt->close();
+    $mysqli->close();
+    
+    return $posts;  
 }
 
     // One
