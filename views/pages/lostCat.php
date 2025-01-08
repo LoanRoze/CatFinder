@@ -1,27 +1,18 @@
 <section class="about">
   <div class="lost-cats">
-    <div class="card">
-      <img src="https://picsum.photos/200/300" alt="Photo de Chippie">
-      <h2>Chippie</h2>
-      <p>Chat sociable, mais parfois agressive</p>
-      <p class="location">Bordeaux</p>
-      <button>Contacter</button>
-    </div>
-
-    <div class="card">
-      <img src="https://picsum.photos/200/300" alt="Photo de Chippie">
-      <h2>Chippie</h2>
-      <p>Chat sociable, mais parfois agressive</p>
-      <p class="location">Bordeaux</p>
-      <button>Contacter</button>
-    </div>
-
-    <div class="card">
-      <img src="https://picsum.photos/200/300" alt="Photo de Chippie">
-      <h2>Chippie</h2>
-      <p>Chat sociable, mais parfois agressive</p>
-      <p class="location">Bordeaux</p>
-      <button>Contacter</button>
-    </div>
+    <?php
+    foreach ($AllLostPosts as $article) { ?>
+      <div class="card">
+        <img class="image-article"><?= $article["image_url"] ?></img>
+        <p><?= $article["description"] ?></p>
+        <p class="location"><?= $article["ville"] ?></p>
+        <p>Publié le <?= $article["published_at"] ?></p>
+        <button>Contacter</button>
+        <div>
+        </div>
+      </div>
+      <?php
+    }
+    ?>
   </div>
 </section>
