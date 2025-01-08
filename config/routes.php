@@ -8,7 +8,8 @@ const AVAILABLE_ROUTES = [
             'description' => 'Liste des annonces de chats perdus',
         ],
         'style' => [
-            '',
+            'common-style.css',
+            'lostCat.css'
         ],
         'scripts' => [
         ],
@@ -20,7 +21,7 @@ const AVAILABLE_ROUTES = [
             'description' => 'Liste de toutes les annonces de chats trouvés',
         ],
         'style' => [
-            '',
+            'common-style.css',
         ],
         'scripts' => [
         ],
@@ -32,7 +33,7 @@ const AVAILABLE_ROUTES = [
             'description' => 'Page connexion',
         ],
         'style' => [
-            '',
+            'common-style.css',
         ],
         'scripts' => [
         ],
@@ -44,7 +45,7 @@ const AVAILABLE_ROUTES = [
             'description' => 'Ceci est une description',
         ],
         'style' => [
-            'legal-mentions.css',
+            'common-style.css',
         ],
         'scripts' => [
         ],
@@ -56,7 +57,7 @@ const AVAILABLE_ROUTES = [
             'description' => 'Ceci est une description',
         ],
         'style' => [
-            'privacy-policy.css',
+            'common-style.css',
         ],
         'scripts' => [
         ],
@@ -68,7 +69,7 @@ const AVAILABLE_ROUTES = [
             'description' => 'Poster une annonce de chat retrouvé',
         ],
         'style' => [
-            '',
+            'common-style.css',
         ],
         'scripts' => [
         ],
@@ -80,11 +81,9 @@ const AVAILABLE_ROUTES = [
             'description' => 'Poster une annonce de chat perdu',
         ],
         'style' => [
-            '',
-            '',
+            'common-style.css',
         ],
         'scripts' => [
-            ''
         ],
     ],
     'deleteFoundCat' => [
@@ -94,6 +93,7 @@ const AVAILABLE_ROUTES = [
             'description' => 'Supprimer un post de chat trouvé',
         ],
         'style' => [
+            'common-style.css'
         ],
         'scripts' => [
         ],
@@ -105,6 +105,7 @@ const AVAILABLE_ROUTES = [
             'description' => 'Supprimer un post de chat perdu',
         ],
         'style' => [
+            'common-style.css'
         ],
         'scripts' => [
         ],
