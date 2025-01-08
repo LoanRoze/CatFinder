@@ -6,13 +6,13 @@ require_once('models/connections.php');
 // Create
 function new_lost_cat($post): bool {
     if (!empty($post)) {
-        $mysql = dbConnect();
+        $mysqli = dbConnect();
         
         $now = new DateTime();
         
         $insertRequest = "INSERT INTO PostLostCat (nom, image_url, description, ville, id_utilisateur, published_at) VALUES 
         (?, ?, ?, ?, ?, ?)";
-        $stmt = $mysqli->prepare($sql);
+        $stmt = $mysqli->prepare($insertRequest);
 
         if ($stmt === false) {
             die("Erreur lors de la préparation de la requête : " . $mysqli->error);
@@ -32,13 +32,13 @@ function new_lost_cat($post): bool {
 
 function new_found_cat($post): bool {
     if (!empty($post)) {
-        $mysql = dbConnect();
+        $mysqli = dbConnect();
         
         $now = new DateTime();
         
         $insertRequest = "INSERT INTO PostFoundCat (image_url, description, localisation, id_utilisateur, published_at) VALUES 
         (?, ?, ?, ?, ?)";
-        $stmt = $mysqli->prepare($sql);
+        $stmt = $mysqli->prepare($insertRequest);
 
         if ($stmt === false) {
             die("Erreur lors de la préparation de la requête : " . $mysqli->error);
@@ -61,10 +61,10 @@ function new_found_cat($post): bool {
 // Read
 
     // Number Of
-function getLastArticles(int $limit, string $table): array {
+function getLastLostCats(int $limit): array {
     $mysqli = dbConnect();
 
-    $sql = "SELECT * FROM ? LIMIT ?";
+    $sql = "SELECT * FROM PostLostCat LIMIT ?";
     $stmt = $mysqli->prepare($sql);
     
     if ($stmt === false) {
@@ -72,7 +72,33 @@ function getLastArticles(int $limit, string $table): array {
     }
 
 
-    $stmt->bind_param("si", $table ,$limit);  
+    $stmt->bind_param("i", $limit);  
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    $posts = [];
+    while ($row = $result->fetch_assoc()) {
+        $posts[] = $row; 
+    }
+
+    $stmt->close();
+    $mysqli->close();
+    
+    return $posts;  
+}
+
+function getLastFoundCats(int $limit): array {
+    $mysqli = dbConnect();
+
+    $sql = "SELECT * FROM PostFoundCat LIMIT ?";
+    $stmt = $mysqli->prepare($sql);
+    
+    if ($stmt === false) {
+        die("Erreur lors de la préparation de la requête : " . $mysqli->error);
+    }
+
+
+    $stmt->bind_param("i", $limit);  
     $stmt->execute();
     $result = $stmt->get_result();
 
@@ -88,46 +114,107 @@ function getLastArticles(int $limit, string $table): array {
 }
 
     // One
-function getArticle(int $id, string $table): array {
+function getLostCat(int $id): array {
     $mysqli = dbConnect();
 
-    $sql = "SELECT * FROM ? WHERE id = ?";
+    $sql = "SELECT * FROM PostLostCat WHERE id = ?";
     $stmt = $mysqli->prepare($sql);
     
     if ($stmt === false) {
         die("Erreur lors de la préparation de la requête : " . $mysqli->error);
     }
 
-    $stmt->bind_param("si", $table, $id);  
+    $stmt->bind_param("i", $id);  
     $stmt->execute();
     $result = $stmt->get_result();
+
+    $posts = [];
+    while ($row = $result->fetch_assoc()) {
+        $posts[] = $row; 
+    }
 
     $stmt->close();
     $mysqli->close();
 
-    return $result;
+    return $posts;
     
 }
- 
 
-function getArticles(string $table): array {
+function getFoundCat(int $id): array {
     $mysqli = dbConnect();
 
-    $sql = "SELECT * FROM ?";
+    $sql = "SELECT * FROM PostFoundCat WHERE id = ?";
     $stmt = $mysqli->prepare($sql);
     
     if ($stmt === false) {
         die("Erreur lors de la préparation de la requête : " . $mysqli->error);
     }
 
-    $stmt->bind_param("s", $table);  
+    $stmt->bind_param("i", $id);  
     $stmt->execute();
     $result = $stmt->get_result();
+
+    $posts = [];
+    while ($row = $result->fetch_assoc()) {
+        $posts[] = $row; 
+    }
 
     $stmt->close();
     $mysqli->close();
 
-    return $result;
+    return $posts;
+    
+}
+
+    // Every
+function getLostCats(): array {
+    $mysqli = dbConnect();
+
+    $sql = "SELECT * FROM PostLostCat";
+    $stmt = $mysqli->prepare($sql);
+    
+    if ($stmt === false) {
+        die("Erreur lors de la préparation de la requête : " . $mysqli->error);
+    }
+
+    // $stmt->bind_param("s", $table);  
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    $posts = [];
+    while ($row = $result->fetch_assoc()) {
+        $posts[] = $row; 
+    }
+
+    $stmt->close();
+    $mysqli->close();
+
+    return $posts;
+    
+}
+function getFoundCats(): array {
+    $mysqli = dbConnect();
+
+    $sql = "SELECT * FROM PostFoundCat";
+    $stmt = $mysqli->prepare($sql);
+    
+    if ($stmt === false) {
+        die("Erreur lors de la préparation de la requête : " . $mysqli->error);
+    }
+
+    // $stmt->bind_param("s", $table);  
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    $posts = [];
+    while ($row = $result->fetch_assoc()) {
+        $posts[] = $row; 
+    }
+
+    $stmt->close();
+    $mysqli->close();
+
+    return $posts;
     
 }
 
