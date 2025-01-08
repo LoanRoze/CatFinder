@@ -219,18 +219,54 @@ function getFoundCats(): array {
 }
 
 // Update
-function edit_article($post, $id) {
+function editLostCat($post, $id) {
     if (!empty($post)) {
-        $articleEditRequest = "UPDATE articles SET 
-        title = :title, description = :description, content = :content
-        WHERE id = :id";
-        $queryinsert = dbConnect()->prepare(query: $articleEditRequest);
-        return $queryinsert->execute(params: [
-            ':title' => $post['title'],
-            ':description' => $post['description'],
-            ':content' => $post['content'],
-            ':id' => $id,
-        ]);
+        $mysqli = dbConnect();
+        
+        $now = new DateTime();
+        
+        $insertRequest = "UPDATE PostLostCat SET nom = ?, image_url = ?, description = ?, ville = ?, id_utilisateur = ?, published_at = ?
+                            WHERE id = ?";
+        $stmt = $mysqli->prepare($insertRequest);
+
+        if ($stmt === false) {
+            die("Erreur lors de la préparation de la requête : " . $mysqli->error);
+        }
+        $stmt->bind_param("ssssidi", 
+            $post['nom'], 
+            $post['image_url'], 
+            $post['description'], 
+            $post['ville'], 
+            $post['id_utilisateur'], 
+            $now,
+            $id
+        );  
+        return $stmt->execute();
+    }
+    return false;
+}
+function editFoundCat($post, $id) {
+    if (!empty($post)) {
+        $mysqli = dbConnect();
+        
+        $now = new DateTime();
+        
+        $insertRequest = "UPDATE PostFoundCat SET nom = ?, image_url = ?, description = ?, ville = ?, id_utilisateur = ?, published_at = ?
+                            WHERE id = ?";
+        $stmt = $mysqli->prepare($insertRequest);
+
+        if ($stmt === false) {
+            die("Erreur lors de la préparation de la requête : " . $mysqli->error);
+        }
+        $stmt->bind_param("sssidi", 
+            $post['image_url'], 
+            $post['description'], 
+            $post['localisation'], 
+            $post['id_utilisateur'],  
+            $now,
+            $id
+        );  
+        return $stmt->execute();
     }
     return false;
 }
