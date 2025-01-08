@@ -4,18 +4,53 @@ require_once('models/connections.php');
 
 
 // Create
-function new_article($post): bool {
+function new_lost_cat($post): bool {
     if (!empty($post)) {
+        $mysql = dbConnect();
+        
         $now = new DateTime();
-        $articleAddRequest = "INSERT INTO articles (title, description, content, published_at) VALUES 
-        (:title, :description, :content, :published_at)";
-        $queryinsert = dbConnect()->prepare(query: $articleAddRequest);
-        return $queryinsert->execute(params: [
-            ':title' => $post['title'],
-            ':description' => $post['description'],
-            ':content' => $post['content'],
-            ':published_at' => date_format($now, "Y-m-d H:i:s"),
-        ]);
+        
+        $insertRequest = "INSERT INTO PostLostCat (nom, image_url, description, ville, id_utilisateur, published_at) VALUES 
+        (?, ?, ?, ?, ?, ?)";
+        $stmt = $mysqli->prepare($sql);
+
+        if ($stmt === false) {
+            die("Erreur lors de la préparation de la requête : " . $mysqli->error);
+        }
+        $stmt->bind_param("ssssid", 
+            $post['nom'], 
+            $post['image_url'], 
+            $post['description'], 
+            $post['ville'], 
+            $post['id_utilisateur'], 
+            $now
+        );  
+        return $stmt->execute();
+    }
+    return false;
+}
+
+function new_found_cat($post): bool {
+    if (!empty($post)) {
+        $mysql = dbConnect();
+        
+        $now = new DateTime();
+        
+        $insertRequest = "INSERT INTO PostFoundCat (image_url, description, localisation, id_utilisateur, published_at) VALUES 
+        (?, ?, ?, ?, ?)";
+        $stmt = $mysqli->prepare($sql);
+
+        if ($stmt === false) {
+            die("Erreur lors de la préparation de la requête : " . $mysqli->error);
+        }
+        $stmt->bind_param("ssssid", 
+            $post['image_url'], 
+            $post['description'], 
+            $post['localisation'], 
+            $post['id_utilisateur'], 
+            $now
+        );  
+        return $stmt->execute();
     }
     return false;
 }
@@ -23,21 +58,20 @@ function new_article($post): bool {
 
 
 
-
 // Read
 
-    // Last
-function getLastArticles(int $limit): array {
+    // Number Of
+function getLastArticles(int $limit, string $table): array {
     $mysqli = dbConnect();
 
-    $sql = "SELECT * FROM PostLostCat LIMIT ?";
+    $sql = "SELECT * FROM ? LIMIT ?";
     $stmt = $mysqli->prepare($sql);
     
     if ($stmt === false) {
         die("Erreur lors de la préparation de la requête : " . $mysqli->error);
     }
 
-    $stmt->bind_param("i", $limit);  
+    $stmt->bind_param("si", $table ,$limit);  
     $stmt->execute();
     $result = $stmt->get_result(); 
 
@@ -53,21 +87,47 @@ function getLastArticles(int $limit): array {
 }
 
     // One
-function getArticle(int $id): array {
-    $sql = 'SELECT title, description, content, published_at
-    FROM articles WHERE id = :id';
-    $query = dbConnect()->prepare(query: $sql);
-    $query->bindParam(param: ":id", var: $id, type: PDO::PARAM_INT);
-    $query->execute();
-    return $query->fetchAll()[0];
-}
+function getArticle(int $id, string $table): array {
+    $mysqli = dbConnect();
 
-function getArticles(): array {
-    $sql = 'SELECT title, description, content, published_at, id
-    FROM articles ORDER BY published_at DESC';
-    $query = dbConnect()->prepare(query: $sql);
-    $query->execute();
-    return $query->fetchAll();
+    $sql = "SELECT * FROM ? WHERE id = ?";
+    $stmt = $mysqli->prepare($sql);
+    
+    if ($stmt === false) {
+        die("Erreur lors de la préparation de la requête : " . $mysqli->error);
+    }
+
+    $stmt->bind_param("si", $table, $id);  
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    $stmt->close();
+    $mysqli->close();
+
+    return $result;
+    
+}
+ 
+
+function getArticles(string $table): array {
+    $mysqli = dbConnect();
+
+    $sql = "SELECT * FROM ?";
+    $stmt = $mysqli->prepare($sql);
+    
+    if ($stmt === false) {
+        die("Erreur lors de la préparation de la requête : " . $mysqli->error);
+    }
+
+    $stmt->bind_param("s", $table);  
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    $stmt->close();
+    $mysqli->close();
+
+    return $result;
+    
 }
 
 // Update
