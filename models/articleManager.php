@@ -71,9 +71,10 @@ function getLastArticles(int $limit, string $table): array {
         die("Erreur lors de la préparation de la requête : " . $mysqli->error);
     }
 
+
     $stmt->bind_param("si", $table ,$limit);  
     $stmt->execute();
-    $result = $stmt->get_result(); 
+    $result = $stmt->get_result();
 
     $posts = [];
     while ($row = $result->fetch_assoc()) {

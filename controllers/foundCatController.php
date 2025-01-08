@@ -1,6 +1,6 @@
 <?php
+require('models/articleManager.php');
+$AllFoundPosts = getArticles("POSTFoundCat");
+
 
 $template = 'views/pages/foundCat.php';
-require('models/articleManager.php');
-
-var_dump(getLastArticles(2));

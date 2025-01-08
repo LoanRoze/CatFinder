@@ -7,4 +7,3 @@ const DB_CONFIG = [
     'username' => 'user_php',
     'password' => 'admin',
 ];
-
