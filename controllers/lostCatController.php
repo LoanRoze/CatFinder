@@ -1,6 +1,6 @@
 <?php
 require('models/articleManager.php');
-$AllLostPosts = getArticles("POSTLostCat");
+$AllLostPosts = getLastLostCats(5);
 
 
 $template = 'views/pages/lostCat.php';
