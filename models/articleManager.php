@@ -273,9 +273,39 @@ function editFoundCat($post, $id) {
 
 // Delete   
 
-function deleteArticle(int $id): void {
-    $sqldelete = "DELETE FROM articles WHERE id = :id";
-    $query = dbConnect()->prepare(query: $sqldelete);
-    $query->bindParam(param: ":id", var: $id, type: PDO::PARAM_INT);
-    $query->execute();
+function deleteLostCat(int $id): void {
+    $mysqli = dbConnect();
+
+    $deleteRequest = "DELETE FROM PostLostCat WHERE id = ?";
+    $stmt = $mysqli->prepare($deleteRequest);
+
+    if ($stmt === false) {
+        die("Erreur lors de la préparation de la requête : " . $mysqli->error);
+    }
+
+    $stmt->bind_param("i", $id);
+    $stmt->execute();
+
+
+    $stmt->close();
+    $mysqli->close();
+    return ;
+}
+function deleteFoundCat(int $id): void {
+    $mysqli = dbConnect();
+
+    $deleteRequest = "DELETE FROM PostFoundCat WHERE id = ?";
+    $stmt = $mysqli->prepare($deleteRequest);
+
+    if ($stmt === false) {
+        die("Erreur lors de la préparation de la requête : " . $mysqli->error);
+    }
+
+    $stmt->bind_param("i", $id);
+    $stmt->execute();
+
+
+    $stmt->close();
+    $mysqli->close();
+    return ;
 }
