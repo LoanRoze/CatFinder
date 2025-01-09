@@ -24,9 +24,9 @@
         <input type="hidden" name="id_utilisateur" value="<?= $_SESSION['id_utilisateur'] ?? '' ?>">
 
         <input type="submit" value="Poster" class="btn">
-    </form> 
+    </form>
 
     <?php if (isset($feedback)) { ?>
-        <span class="alert-alert <?= $feedback['type'] ?>"><?= $feedback['message'] ?></span>
+    <span class="alert-alert <?= $feedback['type'] ?>"><?= $feedback['message'] ?></span>
     <?php } ?>
 </div>

@@ -10,11 +10,20 @@
 </head>
 
 <body>
-    
+
     <div class="container">
-        <h1>Localiser un point avec Mapbox</h1>
-        <div id="map"></div>
         <form id="locationForm" action="/submit-location" method="POST">
+            <div class="form-group">
+                <label for="image">Une photo du chat :</label>
+                <input type="file" id="image" name="image" class="form-control">
+            </div>
+            <br>
+            <div id="map"></div>
+
+            <div class="form-group">
+                <label for="description">Description :</label>
+                <textarea id="description" name="description" class="form-control" required></textarea>
+            </div>
             <label for="latitude"></label>
             <input type="hidden" id="latitude" name="latitude" readonly required>
             <label for="longitude"></label>
@@ -23,7 +32,6 @@
         </form>
     </div>
     <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
-    <script src="script.js"></script>
 </body>
 
 </html>

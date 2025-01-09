@@ -9,7 +9,6 @@
 
 /* Corps du site */
 body {
-    font-family: 'Poppins', sans-serif;
     color: #333;
 }
 
@@ -31,6 +30,7 @@ body {
 
 /* Style des cartes */
 .card {
+    background-color: #fff;
     border-radius: 15px;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
     overflow: hidden;
