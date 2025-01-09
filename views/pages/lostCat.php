@@ -3,7 +3,7 @@
     <?php
     foreach ($AllLostPosts as $article) { ?>
       <div class="card">
-        <img class="image-article"><?= $article["image_url"] ?></img>
+        <img src="<?= $article["image_url"] ?>" class="image-article"></img>
         <p><?= $article["description"] ?></p>
         <p class="location"><?= $article["ville"] ?></p>
         <p>Publié le <?= $article["published_at"] ?></p>
