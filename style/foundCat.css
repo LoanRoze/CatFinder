@@ -30,12 +30,12 @@ body {
 
 /* Style des cartes */
 .card {
-    background-color: #fff;
     border-radius: 15px;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     position: relative;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: black;
 }
 
 /* Effet au survol de la carte */
@@ -46,7 +46,7 @@ body {
 
 /* Image de la carte */
 .card img {
-    width: 100%;
+    width: 350px;
     height: 220px; /* Hauteur fixe pour l'image */
     object-fit: cover; /* Garder l'aspect sans déformation */
     transition: transform 0.3s ease-in-out;
@@ -63,26 +63,27 @@ body {
     font-size: 20px;
     font-weight: 600;
     margin: 10px 0;
-    color: #333;
+    color: white;
 }
 
 /* Description (localisation) */
 .card .location {
     font-size: 14px;
-    color: #555;
+    color: white;
     margin: 5px 0;
 }
 
 /* Date de publication */
 .card p {
     font-size: 12px;
-    color: #777;
+    color: white;
     margin: 5px 0;
 }
 
 /* Bouton */
 .card button {
-    background-color: #4CAF50;
+    background: linear-gradient(#1845ad,
+                #23a2f6);
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -90,7 +91,6 @@ body {
     font-size: 14px;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 
 /* Effet du bouton au survol */

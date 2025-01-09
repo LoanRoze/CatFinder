@@ -14,15 +14,16 @@
         <div class="shape"></div>
     </div>
     <form>
-        <h3>Login Here</h3>
+        <h3>Vous connecter</h3>
 
-        <label for="username">Username</label>
-        <input type="text" placeholder="Email or Phone" id="username">
+        <label for="username">Nom d'utilisateur</label>
+        <input type="text" placeholder="Email ou Téléphone" id="username">
 
-        <label for="password">Password</label>
-        <input type="password" placeholder="Password" id="password">
+        <label for="password">Mot de passe</label>
+        <input type="password" placeholder="Mot de passe" id="password">
 
         <button>Log In</button>
+        <div id="create-account-infos">Vous n'avez pas de compte <a href="">Créer un compte</a></div>
     </form>
 </body>
 
