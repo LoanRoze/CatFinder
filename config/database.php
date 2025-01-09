@@ -1,8 +1,8 @@
 <?php 
 
 const DB_CONFIG = [
-    'host' => '5.tcp.eu.ngrok.io',
-    'port' => 19961,
+    'host' => '7.tcp.eu.ngrok.io',
+    'port' => 14342,
     'database' => 'catfinder',
     'username' => 'user_php',
     'password' => 'admin',
