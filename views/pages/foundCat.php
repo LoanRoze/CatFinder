@@ -3,7 +3,7 @@
     <?php
     foreach ($AllFoundPosts as $article) { ?>
       <div class="card">
-        <img class="image-article"><?= $article["image_url"] ?></img>
+        <img class="image-article" src="<?= $article["image_url"] ?>" alt="catimg">
         <p><?= $article["description"] ?></p>
         <p class="location"><?= $article["localisation"] ?></p>
         <p>Publié le <?= $article["published_at"] ?></p>
