@@ -66,7 +66,7 @@ function new_found_cat($post): bool {
 function getLastLostCats(int $limit): array {
     $mysqli = dbConnect();
 
-    $sql = "SELECT * FROM PostLostCat LIMIT ?";
+    $sql = "SELECT * FROM PostLostCat ORDER BY id DESC LIMIT ? ";
     $stmt = $mysqli->prepare($sql);
     
     if ($stmt === false) {
@@ -92,7 +92,7 @@ function getLastLostCats(int $limit): array {
 function getLastFoundCats(int $limit): array {
     $mysqli = dbConnect();
 
-    $sql = "SELECT * FROM PostFoundCat LIMIT ?";
+    $sql = "SELECT * FROM PostFoundCat ORDER BY id DESC LIMIT ? ";
     $stmt = $mysqli->prepare($sql);
     
     if ($stmt === false) {

@@ -1,5 +1,5 @@
 <?php
 require('models/articleManager.php');
-$AllFoundPosts = getLastFoundCats(5);
+$AllFoundPosts = getLastFoundCats(100);
 
 $template = 'views/pages/foundCat.php';
