@@ -22,6 +22,7 @@ const AVAILABLE_ROUTES = [
         ],
         'style' => [
             'common-style.css',
+            'foundCat.css'
         ],
         'scripts' => [
         ],
@@ -34,6 +35,7 @@ const AVAILABLE_ROUTES = [
         ],
         'style' => [
             'common-style.css',
+            'login.css',
         ],
         'scripts' => [
             'mapManager.js'
@@ -63,6 +65,18 @@ const AVAILABLE_ROUTES = [
         'scripts' => [
         ],
     ],
+    'postAnnoncement' => [
+        'template' => 'postAnnoncementController.php',
+        'seo' => [
+            'title' => 'Publier une annonce',
+        ],
+        'style' => [
+            'common-style.css',
+            'postAnnoncement.css'
+        ],
+        'scripts' => [
+        ],
+    ],
     'postFoundCat' => [
         'template' => 'postFoundCatController.php',
         'seo' => [
@@ -73,6 +87,7 @@ const AVAILABLE_ROUTES = [
             'common-style.css',
         ],
         'scripts' => [
+            'mapManager.js'
         ],
     ],
     'postLostCat' => [
