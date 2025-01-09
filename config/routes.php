@@ -36,6 +36,7 @@ const AVAILABLE_ROUTES = [
             'common-style.css',
         ],
         'scripts' => [
+            'mapManager.js'
         ],
     ],
     'legal-mentions' => [
