@@ -9,7 +9,6 @@ function new_lost_cat($post): bool {
         $mysqli = dbConnect();
         
         $now = date_format(new DateTime(), "Y-m-d");
-        var_dump($now);
         
         $insertRequest = "INSERT INTO PostLostCat (nom, image_url, description, ville, id_utilisateur, published_at) VALUES 
         (?, ?, ?, ?, ?, ?)";
@@ -26,7 +25,6 @@ function new_lost_cat($post): bool {
             $post['id_utilisateur'], 
             $now
         );  
-        var_dump($stmt);
         return $stmt->execute();
     }
     return false;
