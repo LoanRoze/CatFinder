@@ -12,6 +12,23 @@
         flex-direction: column;
     }
 
+    #fileuploader {
+        display: none;
+    }
+    
+    #fileuploaderinput {
+        height: 30px;
+        width: 30px;
+        background-image: url("https://icon-library.com/images/white-plus-icon/white-plus-icon-3.jpg");
+        background-position: 100%;
+        background-size: 100%;
+        align-self: center;
+    }
+    
+    #fileuploaderinput:hover {
+        cursor: pointer;
+    }
+
     .background {
         width: 330px;
         height: 420px;
@@ -44,8 +61,10 @@
     }
 
     form {
-        height: 420px;
-        width: 300px;
+        display: flex;
+        flex-direction: column;
+        height: 470px;
+        width: 350px;
         background-color: rgba(255, 255, 255, 0.13);
         position: absolute;
         transform: translate(-50%, -50%);
@@ -66,7 +85,7 @@
     }
 
     form h3 {
-        font-size: 28px;
+        font-size: 26px;
         font-weight: 500;
         line-height: 42px;
         text-align: center;
@@ -95,7 +114,7 @@
         color: #e5e5e5;
     }
 
-    button {
+    .btn {
         margin-top: 20px;
         width: 100%;
         background-color: #ffffff;
@@ -117,7 +136,7 @@
         color: #f09819;
     }
 
-    button:hover {
+    .btn:hover {
         background: linear-gradient(to right,
                 #ff512f,
                 #f09819);

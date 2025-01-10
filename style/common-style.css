@@ -44,6 +44,7 @@ header {
   background: linear-gradient(to right,
                 red,
                 orange);
+                color: black;
 }
 .nav-left,
 .nav-right {

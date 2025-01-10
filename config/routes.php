@@ -104,9 +104,11 @@ const AVAILABLE_ROUTES = [
         ],
         'style' => [
             'common-style.css',
-            'toast.css',
+            'postLostCat.css',
+            'toast.css'
         ],
         'scripts' => [
+            'uploadfileManager.js',
             'alertManager.js',
         ],
     ],
