@@ -34,16 +34,16 @@ function new_found_cat($post): bool {
     if (!empty($post)) {
         $mysqli = dbConnect();
         
-        $now = new DateTime();
+        $now = date_format(new DateTime(), "Y-m-d");
         
-        $insertRequest = "INSERT INTO PostFoundCat (image_url, description, localisation, id_utilisateur, published_at) VALUES 
+        $insertRequest = "INSERT INTO PostFoundCat (image_url, description, longitude, latitude, id_utilisateur, published_at) VALUES 
         (?, ?, ?, ?, ?, ?)";
         $stmt = $mysqli->prepare($insertRequest);
 
         if ($stmt === false) {
             die("Erreur lors de la préparation de la requête : " . $mysqli->error);
         }
-        $stmt->bind_param("ssssii", 
+        $stmt->bind_param("ssssis", 
             $post['image_url'], 
             $post['description'], 
             $post['longitude'], 
@@ -224,7 +224,7 @@ function editLostCat($post, $id) {
     if (!empty($post)) {
         $mysqli = dbConnect();
         
-        $now = new DateTime();
+        $now = date_format(new DateTime(), "Y-m-d");
         
         $insertRequest = "UPDATE PostLostCat SET nom = ?, image_url = ?, description = ?, ville = ?, id_utilisateur = ?, published_at = ?
                             WHERE id = ?";
@@ -233,7 +233,7 @@ function editLostCat($post, $id) {
         if ($stmt === false) {
             die("Erreur lors de la préparation de la requête : " . $mysqli->error);
         }
-        $stmt->bind_param("ssssidi", 
+        $stmt->bind_param("ssssisi", 
             $post['nom'], 
             $post['image_url'], 
             $post['description'], 
@@ -250,7 +250,7 @@ function editFoundCat($post, $id) {
     if (!empty($post)) {
         $mysqli = dbConnect();
         
-        $now = new DateTime();
+        $now = date_format(new DateTime(), "Y-m-d");
         
         $insertRequest = "UPDATE PostFoundCat SET nom = ?, image_url = ?, description = ?, ville = ?, id_utilisateur = ?, published_at = ?
                             WHERE id = ?";
@@ -259,7 +259,7 @@ function editFoundCat($post, $id) {
         if ($stmt === false) {
             die("Erreur lors de la préparation de la requête : " . $mysqli->error);
         }
-        $stmt->bind_param("ssssiii", 
+        $stmt->bind_param("ssssisi", 
             $post['image_url'], 
             $post['description'], 
             $post['longitude'], 

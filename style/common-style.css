@@ -105,3 +105,10 @@ footer li {
   margin-bottom: 20px;
 }
 
+.toastalert, .toasterror {
+  position: absolute;
+  top: 10%;
+  left: 93%;
+  transform: translate(-50%,-50%);
+  display: none;
+}
