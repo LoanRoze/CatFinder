@@ -18,7 +18,12 @@ if (
     if ($image_upload['error'] === UPLOAD_ERR_OK) {
         $local_file = $image_upload['tmp_name'];
 
-        $post_id = getLastFoundCats(1)[0]['id'] + 1;
+        if (count(getLastFoundCats(1)) == 0) {
+            $post_id = 1;
+        } else {
+            $post_id = getLastFoundCats(1)[0]['id'] + 1;
+        }
+
         $remote_file = '/web/nightlanclub/webfolder/foundCat/' . $post_id;
         $image_url = "http://nightcraft.fr/webfolder/foundCat/" . $post_id;
 
