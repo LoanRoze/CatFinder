@@ -1,25 +1,33 @@
-<div class="container">
-    <h1>Formulaire</h1>
-    <form action="" method="POST" class="form-Ajout" enctype="multipart/form-data">
-        <div class="form-group">
-            <label for="image">Une photo du chat :</label>
-            <input type="file" id="image" name="image" class="form-control">
-        </div>
+<!DOCTYPE html>
+<html lang="en">
 
-        <div class="form-group">
-            <label for="nom">Nom de votre chat :</label>
-            <input type="text" id="nom" name="nom" class="form-control" required>
-        </div>
+<head>
+    <title>Glassmorphism login Form Tutorial in html css</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+</head>
 
-        <div class="form-group">
-            <label for="description">Description :</label>
-            <textarea id="description" name="description" class="form-control" required></textarea>
-        </div>
+<body>
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+    <form>
+        <h3>J'ai perdu mon chat</h3>
 
-        <div class="form-group">
-            <label for="ville">Votre ville :</label>
-            <input type="text" id="ville" name="ville" class="form-control" required>
-        </div>
+        <label for="image">Ajouter une photo de votre chat</label>
+        <input id="fileuploader" type="file" id="image" name="image" class="form-control">
+        <div id="fileuploaderinput"></div>
+
+        <label for="name">Nom de votre chat :</label>
+        <input type="text" placeholder="Nom de votre chat" id="name">
+
+        <label for="description">Description</label>
+        <input type="text" placeholder="Description" id="description">
+
+        <label for="ville">Ville</label>
+        <input type="text" placeholder="Votre ville" id="ville">
 
         <input type="hidden" name="id_utilisateur" value="<?= $_SESSION['id_utilisateur'] ?? '' ?>">
 
@@ -29,4 +37,7 @@
     <?php if (isset($feedback)) { ?>
     <span class="alert-alert <?= $feedback['type'] ?>"><?= $feedback['message'] ?></span>
     <?php } ?>
-</div>
+    </form>
+</body>
+
+</html>

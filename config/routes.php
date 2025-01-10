@@ -98,8 +98,10 @@ const AVAILABLE_ROUTES = [
         ],
         'style' => [
             'common-style.css',
+            'postLostCat.css'
         ],
         'scripts' => [
+            'uploadfileManager.js',
         ],
     ],
     'deleteFoundCat' => [
