@@ -57,7 +57,6 @@ if (
         $result = new_lost_cat($post);
     }
 
-    var_dump($result);
     if ($result) {
         echo"<script defer>
                 setTimeout( ()=>{
