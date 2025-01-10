@@ -25,18 +25,28 @@ if (
         $ftp_conn = ftp_ssl_connect($ftp_host) or die("Impossible de se connecter à $ftp_host via FTPS");
     
         if (ftp_login($ftp_conn, $ftp_user, $ftp_pass)) {
-            $result = "Connexion réussie via FTPS";
             ftp_pasv($ftp_conn, true);
     
             if (ftp_put($ftp_conn, $remote_file, $local_file, FTP_BINARY)) {
-                $result = "Fichier envoyé avec succès à $remote_file";
+                $result = "Fichier envoyé avec succès";
+                $isImageSent = true;
             } else {
                 $result = "Erreur lors de l'envoi du fichier";
+                $isImageSent = false;
             }
         } else {
-            $result = "Échec de la connexion FTPS";
+            $result = "Échec de la connexion au serveur";
+            $isImageSent = false;
         }
 
+        
+    } else {
+        $result = "Erreur lors du téléchargement du fichier : " . $image_upload['error'];
+        $image_url = 'none';
+        $isImageSent = false;
+    }
+    
+    if ($isImageSent) {
         $post = [
             'nom' => $_POST['nom'],
             'image_url' => $image_url,
@@ -44,23 +54,24 @@ if (
             'ville' => $_POST['ville'],
             'id_utilisateur' => null
         ];
-
-    } else {
-        $result = "Erreur lors du téléchargement du fichier : " . $image_upload['error'];
+        $result = new_lost_cat($post);
     }
 
-    $result = new_lost_cat($post);
+    var_dump($result);
     if ($result) {
-        $feedback = [
-            'type' => 'success',
-            'message' => "Annonce publiée !",
-        ];
+        echo"<script defer>
+                setTimeout( ()=>{
+                    showToastSuccess('Annonce publiée !')
+                }, 100)
+            </script>";
     } else {
-        $feedback = [
-            'type' => 'error',
-            'message' => "Oups, il y a eu un problème ...",
-        ];
+        echo"<script defer>
+                setTimeout( ()=>{
+                    showToastError(' Oups, il y a eu un problème ... ')
+                }, 100)
+            </script>";
     }
 }
+
 
 $template = 'views/pages/postLostCat.php';
