@@ -24,9 +24,18 @@
         background-size: 100%;
         align-self: center;
     }
+
+    #imagelabel {
+        align-self: center;
+    }
     
     #fileuploaderinput:hover {
         cursor: pointer;
+    }
+
+    .form-group {
+        display: flex;
+        flex-direction: column;
     }
 
     .background {
@@ -93,19 +102,16 @@
 
     label {
         display: block;
-        margin-top: 10px;
         font-size: 16px;
         font-weight: 500;
     }
 
-    input {
+    #nom, #description, #ville {
         display: block;
         height: 40px;
         width: 100%;
         background-color: rgba(255, 255, 255, 0.07);
         border-radius: 3px;
-        padding: 0 10px;
-        margin-top: 8px;
         font-size: 14px;
         font-weight: 300;
     }
@@ -115,7 +121,6 @@
     }
 
     .btn {
-        margin-top: 20px;
         width: 100%;
         background-color: #ffffff;
         color: #080710;
@@ -127,7 +132,6 @@
     }
 
     #create-account-infos {
-        margin-top: 15px;
         font-size: 15px;
         text-align: center;
     }
