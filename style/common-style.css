@@ -13,7 +13,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: #080710;
+  background-color: white;
 }
 
 .page-container {
@@ -24,7 +24,6 @@ body {
 
 header {
   padding: 10px 2vw;
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
   width: 64.5%;
   align-self: center;
 }

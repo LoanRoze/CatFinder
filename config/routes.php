@@ -25,6 +25,8 @@ const AVAILABLE_ROUTES = [
             'foundCat.css'
         ],
         'scripts' => [
+            'popupManager.js',
+            'mapManager.js',
         ],
     ],
     'login' => [
