@@ -1,0 +1,59 @@
+.toastalert, .toasterror {
+    position: absolute;
+    top: 10%;
+    left: 93%;
+    transform: translate(-50%,-50%);
+    display: none;
+}
+
+.check {
+    border-radius: 5px;
+    width: 10vw;
+    height: 5vh;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    padding: 1vh 1vw;
+    background-color: #2B3246;
+    cursor:pointer;
+    color: #0ad406;
+    margin: 2vh 2vw;
+}
+.check:hover{
+    background-color: rgba(147, 209, 117, 0.50);
+    transition:0.5s;
+}
+.error {
+    border-radius: 5px;
+    width: 10vw;
+    height: 5vh;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #2B3246;
+    cursor:pointer;
+    color: rgb(247, 149, 72);
+    margin: 20px;
+  }
+  
+  .error:hover{
+    background-color: rgba(247, 149, 73, 0.50);
+    transition:0.5s;
+  }
+.toastalert, .toasterror {
+	opacity: 1;
+	animation-name: fadeOutOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 2s;
+}
+
+@keyframes fadeOutOpacity {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}

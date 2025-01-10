@@ -36,8 +36,10 @@ const AVAILABLE_ROUTES = [
         'style' => [
             'common-style.css',
             'login.css',
+            'toast.css',
         ],
         'scripts' => [
+            'alertManager.js',
             'mapManager.js'
         ],
     ],
@@ -72,9 +74,11 @@ const AVAILABLE_ROUTES = [
         ],
         'style' => [
             'common-style.css',
-            'postAnnoncement.css'
+            'postAnnoncement.css',
+            'toast.css',
         ],
         'scripts' => [
+            'alertManager.js',
         ],
     ],
     'postFoundCat' => [
@@ -85,9 +89,11 @@ const AVAILABLE_ROUTES = [
         ],
         'style' => [
             'common-style.css',
+            'toast.css',
         ],
         'scripts' => [
-            'mapManager.js'
+            'alertManager.js',
+            'mapManager.js',
         ],
     ],
     'postLostCat' => [
@@ -98,10 +104,12 @@ const AVAILABLE_ROUTES = [
         ],
         'style' => [
             'common-style.css',
-            'postLostCat.css'
+            'postLostCat.css',
+            'toast.css'
         ],
         'scripts' => [
             'uploadfileManager.js',
+            'alertManager.js',
         ],
     ],
     'deleteFoundCat' => [
@@ -111,9 +119,11 @@ const AVAILABLE_ROUTES = [
             'description' => 'Supprimer un post de chat trouvé',
         ],
         'style' => [
-            'common-style.css'
+            'common-style.css',
+            'toast.css',
         ],
         'scripts' => [
+            'alertManager.js',
         ],
     ],
     'deleteLostCat' => [
@@ -123,9 +133,11 @@ const AVAILABLE_ROUTES = [
             'description' => 'Supprimer un post de chat perdu',
         ],
         'style' => [
-            'common-style.css'
+            'common-style.css',
+            'toast.css',
         ],
         'scripts' => [
+            'alertManager.js',
         ],
     ],
 ];
