@@ -22,7 +22,8 @@ body {
 /* Disposition en grille */
 .lost-cats {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Grille fluide */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    /* Grille fluide */
     gap: 20px;
     padding: 20px;
     justify-items: center;
@@ -31,25 +32,27 @@ body {
 /* Style des cartes */
 .card {
     border-radius: 15px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    background-color: rgb(231, 231, 231);
     overflow: hidden;
     position: relative;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background-color: black;
+    border: 2px solid rgb(179, 179, 179);
 }
 
 /* Effet au survol de la carte */
 .card:hover {
-    transform: translateY(-10px); /* Légère élévation au survol */
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    transform: translateY(-10px);
+    /* Légère élévation au survol */
+    box-shadow: 0 6px 20px rgba(56, 56, 56, 0.334);
 }
 
 /* Image de la carte */
 .card img {
-    width: 350px;
-    height: 220px; /* Hauteur fixe pour l'image */
-    object-fit: cover; /* Garder l'aspect sans déformation */
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
     transition: transform 0.3s ease-in-out;
+    border-bottom: 2px solid rgb(179, 179, 179);
 }
 
 /* Contenu de la carte */
@@ -58,32 +61,31 @@ body {
     text-align: center;
 }
 
-/* Titre de la carte */
-.card h2 {
-    font-size: 20px;
-    font-weight: 600;
+.card h3 {
+    font-size: 16px;
+    font-weight: 500;
     margin: 10px 0;
-    color: white;
+    color: black;
 }
 
 /* Description (localisation) */
 .card .location {
     font-size: 14px;
-    color: white;
+    color: black;
     margin: 5px 0;
 }
 
 /* Date de publication */
 .card p {
     font-size: 12px;
-    color: white;
+    color: black;
     margin: 5px 0;
 }
 
-/* Bouton */
 .card button {
-    background: linear-gradient(#1845ad,
-                #23a2f6);
+    background: linear-gradient(to right,
+            #ff512f,
+            #f09819);
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -93,52 +95,100 @@ body {
     cursor: pointer;
 }
 
-/* Effet du bouton au survol */
 .card button:hover {
-    background-color: #388E3C;
+    background: linear-gradient(to right,
+            red,
+            orange);
+    color: black;
 }
 
-/* Responsivité pour les petits écrans */
+.location {
+    display: none;
+}
+
+.popup-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    height: 90%;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.map {
+    height: 400px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
 @media (max-width: 768px) {
     .lost-cats {
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Plus petites colonnes sur les tablettes */
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     }
 
     .card img {
-        height: 200px; /* Réduction de la taille de l'image sur tablette */
+        height: 200px;
+        /* Réduction de la taille de l'image sur tablette */
     }
 
     .card h2 {
-        font-size: 18px; /* Réduction du titre */
+        font-size: 18px;
+        /* Réduction du titre */
     }
 
     .card .location {
-        font-size: 12px; /* Réduction du texte de localisation */
+        font-size: 12px;
+        /* Réduction du texte de localisation */
     }
 
     .card button {
-        font-size: 16px; /* Réduction du texte du bouton */
+        font-size: 16px;
+        /* Réduction du texte du bouton */
     }
 }
 
 @media (max-width: 480px) {
     .lost-cats {
-        grid-template-columns: 1fr; /* Une seule colonne sur mobile */
+        grid-template-columns: 1fr;
+        /* Une seule colonne sur mobile */
     }
 
     .card img {
-        height: 180px; /* Image encore plus petite sur mobile */
+        height: 180px;
+        /* Image encore plus petite sur mobile */
     }
 
     .card h2 {
-        font-size: 16px; /* Petit titre pour mobile */
+        font-size: 16px;
+        /* Petit titre pour mobile */
     }
 
     .card p {
-        font-size: 10px; /* Texte encore plus petit */
+        font-size: 10px;
+        /* Texte encore plus petit */
     }
 
     .card button {
-        font-size: 14px; /* Bouton plus petit sur mobile */
+        font-size: 14px;
+        /* Bouton plus petit sur mobile */
     }
 }
