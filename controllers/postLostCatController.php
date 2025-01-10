@@ -19,8 +19,8 @@ if (
         $local_file = $image_upload['tmp_name'];
 
         $post_id = getLastLostCats(1)[0]['id'] + 1;
-        $remote_file = '/web/nightlanclub/webfolder/uploads/' . $post_id;
-        $image_url = "http://nightcraft.fr/webfolder/uploads/" . $post_id;
+        $remote_file = '/web/nightlanclub/webfolder/lostCat/' . $post_id;
+        $image_url = "http://nightcraft.fr/webfolder/lostCat/" . $post_id;
 
         $ftp_conn = ftp_ssl_connect($ftp_host) or die("Impossible de se connecter à $ftp_host via FTPS");
     

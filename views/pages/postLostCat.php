@@ -38,11 +38,6 @@
 
         <input type="submit" value="Poster" class="btn">
     </form>
-
-    <?php if (isset($feedback)) { ?>
-    <span class="alert-alert <?= $feedback['type'] ?>"><?= $feedback['message'] ?></span>
-    <?php } ?>
-    </form>
 </body>
 
 </html>

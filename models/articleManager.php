@@ -37,16 +37,17 @@ function new_found_cat($post): bool {
         $now = new DateTime();
         
         $insertRequest = "INSERT INTO PostFoundCat (image_url, description, localisation, id_utilisateur, published_at) VALUES 
-        (?, ?, ?, ?, ?)";
+        (?, ?, ?, ?, ?, ?)";
         $stmt = $mysqli->prepare($insertRequest);
 
         if ($stmt === false) {
             die("Erreur lors de la préparation de la requête : " . $mysqli->error);
         }
-        $stmt->bind_param("ssssid", 
+        $stmt->bind_param("ssssii", 
             $post['image_url'], 
             $post['description'], 
-            $post['localisation'], 
+            $post['longitude'], 
+            $post['latitude'], 
             $post['id_utilisateur'], 
             $now
         );  
@@ -258,10 +259,11 @@ function editFoundCat($post, $id) {
         if ($stmt === false) {
             die("Erreur lors de la préparation de la requête : " . $mysqli->error);
         }
-        $stmt->bind_param("sssidi", 
+        $stmt->bind_param("ssssiii", 
             $post['image_url'], 
             $post['description'], 
-            $post['localisation'], 
+            $post['longitude'], 
+            $post['latitude'], 
             $post['id_utilisateur'],  
             $now,
             $id
