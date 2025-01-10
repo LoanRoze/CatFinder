@@ -9,7 +9,7 @@ const AVAILABLE_ROUTES = [
         ],
         'style' => [
             'common-style.css',
-            'lostCat.css'
+            'lostCat.css',
         ],
         'scripts' => [
         ],

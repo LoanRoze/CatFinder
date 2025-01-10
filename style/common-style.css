@@ -1,3 +1,11 @@
+.toastalert, .toasterror {
+  position: absolute;
+  top: 10%;
+  left: 93%;
+  transform: translate(-50%,-50%);
+  display: none;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -105,3 +113,10 @@ footer li {
   margin-bottom: 20px;
 }
 
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 480px) {
+
+}
