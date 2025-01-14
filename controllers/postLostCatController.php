@@ -1,7 +1,15 @@
 <?php
 
+require_once('./models/loginManager.php');
 require_once('./models/articleManager.php');
+require_once('./services/response/response.php');
 require_once('./models/imageImportManager.php');
+
+session_start();
+
+if (!checkIfLoggedInfos()) {
+    redirect('login');
+}
 
 if (
     !empty($_POST['nom']) &&
@@ -32,7 +40,7 @@ if (
             'image_url' => $image_url,
             'description' => $_POST['description'],
             'ville' => $_POST['ville'],
-            'id_utilisateur' => null
+            'id_utilisateur' => $_SESSION['id']
         ];
         $result = new_lost_cat($post);
     }

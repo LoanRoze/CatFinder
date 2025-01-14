@@ -1,7 +1,15 @@
 <?php
 
+require_once('./models/loginManager.php');
 require_once('./models/articleManager.php');
-require('./models/imageImportManager.php');
+require_once('./services/response/response.php');
+require_once('./models/imageImportManager.php');
+
+session_start();
+
+if (!checkIfLoggedInfos()) {
+    redirect('login');
+}
 
 if (
     !empty($_POST['description']) &&
@@ -32,7 +40,7 @@ if (
             'description' => $_POST['description'],
             'longitude' => $_POST['longitude'],
             'latitude' => $_POST['latitude'],
-            'id_utilisateur' => null
+            'id_utilisateur' => $_SESSION['id']
         ];
         $result = new_found_cat($post);
     }

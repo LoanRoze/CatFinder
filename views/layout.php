@@ -15,7 +15,7 @@
     <?php } ?>
 </head>
 <body>
-    <?php require('views/partials/_header.html') ?>
+    <?php require('views/partials/_header.php') ?>
     <main>
         <?php require($template)?>
     </main>
