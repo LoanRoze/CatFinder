@@ -2,6 +2,7 @@
 
 require_once('models/connections.php');
 
+//CREATE
 function new_user($post) {
     if (!empty($post)) {
         $mysqli = dbConnect();
@@ -24,6 +25,8 @@ function new_user($post) {
     return false;
 }
 
+//READ
+    //EVERY
 function getUsers() {
     $mysqli = dbConnect();
 
@@ -49,6 +52,7 @@ function getUsers() {
     return $posts;  
 }
 
+    //ONE
 function getUser($id) {
     $mysqli = dbConnect();
 
@@ -78,7 +82,7 @@ function getUser($id) {
         return false;
     }
 }
-
+    //CONDITION
 function checkUser($nom, $password) {
     $mysqli = dbConnect();
 
@@ -114,6 +118,8 @@ function checkUser($nom, $password) {
     
 }
 
+
+//SESSION STORAGE
 function sessionInsert($user_infos) {
     $_SESSION['id'] = $user_infos['id'];
     $_SESSION['nom'] = $user_infos['nom'];

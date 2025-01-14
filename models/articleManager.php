@@ -178,7 +178,6 @@ function getLostCats(): array {
         die("Erreur lors de la préparation de la requête : " . $mysqli->error);
     }
 
-    // $stmt->bind_param("s", $table);  
     $stmt->execute();
     $result = $stmt->get_result();
 
@@ -203,7 +202,6 @@ function getFoundCats(): array {
         die("Erreur lors de la préparation de la requête : " . $mysqli->error);
     }
 
-    // $stmt->bind_param("s", $table);  
     $stmt->execute();
     $result = $stmt->get_result();
 

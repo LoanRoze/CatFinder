@@ -2,8 +2,9 @@
 
 require_once('./models/loginManager.php');
 require_once('./models/articleManager.php');
-require_once('./services/response/response.php');
 require_once('./models/imageImportManager.php');
+require_once('./models/toastManager.php');
+require_once('./services/response/response.php');
 
 session_start();
 
@@ -46,17 +47,9 @@ if (
     }
 
     if ($result) {
-        echo "<script defer>
-                setTimeout( ()=>{
-                    showToastSuccess('Annonce publiée !')
-                }, 100)
-            </script>";
+        toastSuccess('Annonce publiée !');
     } else {
-        echo "<script defer>
-                setTimeout( ()=>{
-                    showToastError(' Oups, il y a eu un problème ... ')
-                }, 100)
-            </script>";
+        toastSuccess('Oups, il y a eu un problème');
     }
 }
 

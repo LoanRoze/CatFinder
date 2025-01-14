@@ -2,6 +2,8 @@
 session_start();
 require_once('./models/loginManager.php');
 require_once('./services/response/response.php');
+require_once('./models/toastManager.php');
+
 
 if (
     !empty($_POST["nom"]) &&
@@ -13,18 +15,9 @@ if (
         $userID != false
     ) {
         sessionInsert(getUser($userID));
-        echo "<script defer>
-        setTimeout( ()=>{
-            showToastSuccess('Vous êtes connecté !')
-        }, 100)
-        </script>";
-        redirect('index.php');
+        toastSuccess('Vous êtes connecté !');
     } else {
-        echo "<script defer>
-                setTimeout( ()=>{
-                    showToastError('Informations Incorrectes')
-                }, 100)
-            </script>";
+        toastError('Informations Incorrectes');
     }
 }
 
