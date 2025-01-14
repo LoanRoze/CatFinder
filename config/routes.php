@@ -12,6 +12,7 @@ const AVAILABLE_ROUTES = [
             'lostCat.css',
         ],
         'scripts' => [
+            'contactpopupManager.js',
         ],
     ],
     'foundCat' => [
@@ -26,7 +27,6 @@ const AVAILABLE_ROUTES = [
         ],
         'scripts' => [
             'popupManager.js',
-            'mapManager.js',
         ],
     ],
     'login' => [

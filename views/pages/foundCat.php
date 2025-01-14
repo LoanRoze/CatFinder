@@ -22,7 +22,7 @@
                 <button class="openPopup">Localisation 🌍</button>
                 <div class="popup-overlay">
                     <div class="popup">
-                        <div class="map"></div>
+                        <div id="map"></div>
                         <button class="goMaps">Itinéraire 📍</button>
                         <br>
                         <button class="closePopup">Fermer ❌</button>
