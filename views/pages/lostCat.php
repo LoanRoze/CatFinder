@@ -9,7 +9,14 @@
                 <h3><?= $article["description"] ?></h2>
                 <p class="location"><?= $article["ville"] ?></p>
                 <p>Publié le <?= $article["published_at"] ?></p>
-                <button>Contacter 📞</button>
+                <button id="contacter">Contacter 📞</button>
+                <div class="popup-overlay">
+                <div class="popup">
+                    <div>Email :</div>
+                    <div>Telephone :</div>
+                    <button class="closePopup">Fermer ❌</button>
+                </div>
+                </div>
             </div>
         </div>
         <?php
