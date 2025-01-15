@@ -54,4 +54,3 @@ if (
 }
 
 $template = 'views/pages/postFoundCat.php';
-

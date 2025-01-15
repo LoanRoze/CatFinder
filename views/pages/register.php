@@ -14,7 +14,7 @@
         <div class="shape"></div>
     </div>
     <form action="" method="POST" class="form-Ajout" enctype="multipart/form-data">
-        <h3>Vous connecter</h3>
+        <h3>Créer un compte</h3>
 
         <div class="form-group">
             <label for="nom">Nom d'utilisateur</label>
@@ -27,8 +27,6 @@
         </div>
 
         <input type="submit" value="Poster" class="btn">
-
-        <div id="create-account-infos">Vous n'avez pas de compte <a href="index.php?page=register">Créer un compte</a></div>
     </form>
 </body>
 
