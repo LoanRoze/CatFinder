@@ -134,3 +134,8 @@ function checkIfLoggedInfos() {
     }
     return false;
 }
+
+function userDeconnexion() {
+    session_unset();
+    header("Refresh:0");
+}
