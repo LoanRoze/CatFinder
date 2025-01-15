@@ -26,7 +26,7 @@
             <input type="password" placeholder="Mot de passe" name="password" id="password">
         </div>
 
-        <input type="submit" value="Poster" class="btn">
+        <input class="button" type="submit" value="Poster" class="btn">
 
         <div id="create-account-infos">Vous n'avez pas de compte <a href="index.php?page=register">Créer un compte</a></div>
     </form>
