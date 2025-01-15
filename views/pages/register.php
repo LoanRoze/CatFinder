@@ -13,8 +13,8 @@
         <div class="shape"></div>
         <div class="shape"></div>
     </div>
-    <form action="" method="POST" class="form-Ajout" enctype="multipart/form-data">
-        <h3>Créer un compte</h3>
+    <form id="registerform" action="" method="POST" class="form-Ajout" enctype="multipart/form-data">
+        <h3 id="registerh3">Créer un compte</h3>
 
         <div class="form-group">
             <label for="nom">Nom d'utilisateur</label>
@@ -36,7 +36,7 @@
             <input type="password" placeholder="Mot de passe" name="password" id="password">
         </div>
 
-        <input type="submit" value="Poster" class="btn">
+        <input class="button" type="submit" value="Poster" class="btn">
     </form>
 </body>
 

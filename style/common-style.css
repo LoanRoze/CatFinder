@@ -28,36 +28,6 @@ header {
   align-self: center;
 }
 
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0 auto;
-}
-
-.nav-link {
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-  margin: 0 10px;
-  padding: 10px 15px;
-  border-radius: 15px;
-  background: linear-gradient(to right,
-                #ff512f,
-                #f09819);
-}
-
-.nav-link:hover {
-  background: linear-gradient(to right,
-                red,
-                orange);
-                color: black;
-}
-.nav-left,
-.nav-right {
-  display: flex;
-}
-
 main {
   flex: 1;
   padding: 2vw;
@@ -110,4 +80,56 @@ footer li {
   border: 1px solid #ccc;
   border-radius: 8px;
   margin-bottom: 20px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  margin: 0 10px;
+  padding: 10px 15px;
+  border-radius: 15px;
+  background: linear-gradient(to right,
+                #ff512f,
+                #f09819);
+}
+
+.nav-link:hover {
+  background: linear-gradient(to right,
+                red,
+                orange);
+                color: black;
+}
+.nav-left,
+.nav-right {
+  display: flex;
+}
+
+/* Media pour tablette */
+@media (max-width: 768px) {
+  .nav-link {
+    margin: 0 10px;
+    padding: 8px 8px;
+    border-radius: 8px;
+    font-size: 10px;
+  }
+}
+
+/* Media pour petit téléphone */
+@media (max-width: 480px) { 
+  .nav-link {
+    padding: 2px 5px;
+    border-radius: 5px;
+    font-size: 8px;
+  }
+  header {
+    width: 80%;
+  }
 }
