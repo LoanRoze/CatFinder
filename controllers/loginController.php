@@ -4,6 +4,9 @@ require_once('./models/loginManager.php');
 require_once('./services/response/response.php');
 require_once('./models/toastManager.php');
 
+if (checkIfLoggedInfos()) {
+    redirect('index.php');
+}
 
 if (
     !empty($_POST["nom"]) &&
@@ -15,7 +18,7 @@ if (
         $userID != false
     ) {
         sessionInsert(getUser($userID));
-        toastSuccess('Vous êtes connecté !');
+        redirectTimeoutWithSuccess('index.php?page=lostCat', 3000, 'Vous êtes connecté !');
     } else {
         toastError('Informations Incorrectes');
     }

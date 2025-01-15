@@ -22,6 +22,16 @@
         </div>
 
         <div class="form-group">
+            <label for="email">Email</label>
+            <input type="text" placeholder="Email" name="email" id="email">
+        </div>
+
+        <div class="form-group">
+            <label for="num_phone">Numéro de Téléphone</label>
+            <input type="tel" placeholder="Numéro de Téléphone" name="num_phone" id="num_phone" pattern="0[6-7][0-9]{8}">
+        </div>
+
+        <div class="form-group">
             <label for="password">Mot de passe</label>
             <input type="password" placeholder="Mot de passe" name="password" id="password">
         </div>
