@@ -167,6 +167,57 @@ function getFoundCat(int $id): array {
     
 }
 
+function getLostCatOfUser(int $userid): array {
+    $mysqli = dbConnect();
+
+    $sql = "SELECT * FROM PostLostCat WHERE id_utilisateur = ?";
+    $stmt = $mysqli->prepare($sql);
+    
+    if ($stmt === false) {
+        die("Erreur lors de la préparation de la requête : " . $mysqli->error);
+    }
+
+    $stmt->bind_param("i", $userid);  
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    $posts = [];
+    while ($row = $result->fetch_assoc()) {
+        $posts[] = $row; 
+    }
+
+    $stmt->close();
+    $mysqli->close();
+
+    return $posts;
+    
+}
+
+function getFoundCatOfUser(int $userid): array {
+    $mysqli = dbConnect();
+
+    $sql = "SELECT * FROM PostFoundCat WHERE id_utilisateur = ?";
+    $stmt = $mysqli->prepare($sql);
+    
+    if ($stmt === false) {
+        die("Erreur lors de la préparation de la requête : " . $mysqli->error);
+    }
+
+    $stmt->bind_param("i", $userid);  
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    $posts = [];
+    while ($row = $result->fetch_assoc()) {
+        $posts[] = $row; 
+    }
+
+    $stmt->close();
+    $mysqli->close();
+
+    return $posts;
+    
+}
     // Every
 function getLostCats(): array {
     $mysqli = dbConnect();

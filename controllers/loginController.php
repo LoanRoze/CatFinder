@@ -5,7 +5,7 @@ require_once('./services/response/response.php');
 require_once('./models/toastManager.php');
 
 if (checkIfLoggedInfos()) {
-    redirect('index.php');
+    redirect('');
 }
 
 if (

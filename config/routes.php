@@ -157,6 +157,20 @@ const AVAILABLE_ROUTES = [
             'alertManager.js',
         ],
     ],
+    'yourposts' => [
+        'template' => 'yourpostsController.php',
+        'seo' => [
+            'title' => 'Vos Publications',
+            'description' => 'Vos publications',
+        ],
+        'style' => [
+            'common-style.css',
+            'toast.css',
+        ],
+        'scripts' => [
+            'alertManager.js',
+        ],
+    ],
 ];
 
 const DEFAULT_ROUTE = AVAILABLE_ROUTES['lostCat'];

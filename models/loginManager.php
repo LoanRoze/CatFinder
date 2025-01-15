@@ -18,7 +18,7 @@ function new_user($post) {
             $post['nom'], 
             $post['email'], 
             $post['num_phone'], 
-            $post['password'], 
+            $post['password'],
         );  
         return $stmt->execute();
     }
