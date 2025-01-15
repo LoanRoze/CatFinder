@@ -45,6 +45,21 @@ const AVAILABLE_ROUTES = [
             'mapManager.js'
         ],
     ],
+    'register' => [
+        'template' => 'registerController.php',
+        'seo' => [
+            'title' => 'Créer un compte',
+            'description' => 'Page créer un compte',
+        ],
+        'style' => [
+            'common-style.css',
+            'login.css',
+            'toast.css',
+        ],
+        'scripts' => [
+            'alertManager.js',
+        ],
+    ],
     'legal-mentions' => [
         'template' => 'legalMentionsController.php',
         'seo' => [
