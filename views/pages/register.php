@@ -27,8 +27,8 @@
         </div>
 
         <div class="form-group">
-            <label for="num_phone">Téléphone</label>
-            <input type="text" placeholder="Téléphone" name="num_phone" id="num_phone">
+            <label for="num_phone">Numéro de Téléphone</label>
+            <input type="tel" placeholder="Numéro de Téléphone" name="num_phone" id="num_phone" pattern="0[6-7][0-9]{8}">
         </div>
 
         <div class="form-group">

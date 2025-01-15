@@ -7,7 +7,7 @@ function new_user($post) {
     if (!empty($post)) {
         $mysqli = dbConnect();
                 
-        $insertRequest = "INSERT INTO utilisateurs (nom, email, num_phone) VALUES 
+        $insertRequest = "INSERT INTO utilisateurs (nom, email, num_phone, password) VALUES 
         (?, ?, ?, ?)";
         $stmt = $mysqli->prepare($insertRequest);
 
@@ -64,6 +64,36 @@ function getUser($id) {
     }
     $stmt->bind_param("i", 
     $id, 
+    );
+
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    $posts = [];
+    while ($row = $result->fetch_assoc()) {
+        $posts[] = $row; 
+    }
+
+    $stmt->close();
+    $mysqli->close();
+    if (count($posts) != 0) {
+        return $posts[0];  
+    } else {
+        return false;
+    }
+}
+
+function getUserByEmail($email) {
+    $mysqli = dbConnect();
+
+    $sql = "SELECT * FROM utilisateurs WHERE email = ?";
+    $stmt = $mysqli->prepare($sql);
+    
+    if ($stmt === false) {
+        die("Erreur lors de la préparation de la requête : " . $mysqli->error);
+    }
+    $stmt->bind_param("s", 
+    $email, 
     );
 
     $stmt->execute();
