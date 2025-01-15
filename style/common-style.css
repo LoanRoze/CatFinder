@@ -112,6 +112,45 @@ footer li {
   display: flex;
 }
 
+.Popup {
+  display: none;
+  position: fixed;
+  top: 27%;
+  left: 71.5%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.800);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  z-index: 1000;
+  width: 200px;
+}
+
+.Popup button {
+  align-items: center;
+  background-color: #ffffff;
+  color: black;
+  font-size: 13px;
+  font-weight: 600;
+  width: 70%;
+  height: 35px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 1px transparent;
+}
+
+.Popup button:hover {
+  background: linear-gradient(to right,
+          #ff512f,
+          #f09819);
+          color: white;
+}
+
+div.nav-link.profilButton:hover {
+  cursor: pointer;
+}
+
 /* Media pour tablette */
 @media (max-width: 768px) {
   .nav-link {
