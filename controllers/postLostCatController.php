@@ -5,6 +5,8 @@ require_once('./models/articleManager.php');
 require_once('./models/imageImportManager.php');
 require_once('./models/toastManager.php');
 require_once('./services/response/response.php');
+require_once('./models/textSafer.php');
+
 
 
 session_start();
@@ -38,10 +40,10 @@ if (
 
     if ($isImageSent) {
         $post = [
-            'nom' => $_POST['nom'],
+            'nom' => safeText($_POST['nom']),
             'image_url' => $image_url,
-            'description' => $_POST['description'],
-            'ville' => $_POST['ville'],
+            'description' => safeText($_POST['description']),
+            'ville' => safeText($_POST['ville']),
             'id_utilisateur' => $_SESSION['id']
         ];
         $result = new_lost_cat($post);
