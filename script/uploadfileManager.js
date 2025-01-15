@@ -1,5 +1,5 @@
 document
   .getElementById("fileuploaderinput")
-  .addEventListener("click", function () {
+  .addEventListener("click", () => {
     document.getElementById("fileuploader").click();
   });

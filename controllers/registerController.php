@@ -6,7 +6,7 @@ require_once('./models/toastManager.php');
 require_once('./models/textSafer.php');
 
 if (checkIfLoggedInfos()) {
-    redirect('index.php');
+    redirect('');
 }
 
 if (
