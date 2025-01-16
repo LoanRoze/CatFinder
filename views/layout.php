@@ -15,10 +15,10 @@
         <link rel="stylesheet" href="style/<?=$style?>">
     <?php } ?>
 
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" type="module"></script>
     <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js" defer></script>
+    
     <?php foreach ($scripts as $script) { ?>
-        <script src="script/<?=$script?>" type="module"></script>
+        <script src="script/<?=$script?>" defer></script>
     <?php } ?>
 </head>
 <body>

@@ -1,24 +1,27 @@
-function testmap() {
-    console.log("message de test")
-}
-
-
-function createMap(containerID, longitude, latitude, draggableMarker) {
+function createMap(containerID, longitude, latitude, draggable) {
     mapboxgl.accessToken = 'pk.eyJ1IjoicmFwaWRvbGFmbGVjaGUiLCJhIjoiY201b2h6M2pnMGwxdDJrczllZjNmd2V4bCJ9.rJRUuXMWPDwSHiBtfBEqsw';
+
     const map = new mapboxgl.Map({
         container: containerID,
         style: 'mapbox://styles/mapbox/streets-v12',
         center: [longitude, latitude],
         zoom: 13,
-        collectResourceTiming: false
     });
+
     let marker = new mapboxgl.Marker({
-        draggable: draggableMarker
+        draggable: draggable
     }).setLngLat([longitude, latitude]).addTo(map);
+
+    function updateMarkerPosition() {
+        const { lng, lat } = marker.getLngLat(); // Récupérer la position
+        console.log(`Longitude: ${lng}, Latitude: ${lat}`); // Afficher dans la console
+    }
+
+    // Ajouter un événement pour capturer les nouvelles positions du marqueur
+    marker.on('dragend', updateMarkerPosition);
+
     return {map, marker}
 }
-
-
 
 function updateFormFields(lng, lat) {
     document.getElementById('longitude').value = lng.toFixed(6);
