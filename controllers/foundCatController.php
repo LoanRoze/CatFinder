@@ -1,5 +1,7 @@
 <?php
 require('models/articleManager.php');
-$AllFoundPosts = getLastFoundCats(6);
+require_once('./models/mapPostsManager.php');
+
+$AllFoundPosts = getFoundCats();
 
 $template = 'views/pages/foundCat.php';
