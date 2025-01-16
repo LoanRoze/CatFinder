@@ -131,34 +131,6 @@ const AVAILABLE_ROUTES = [
             'alertManager.js',
         ],
     ],
-    'deleteFoundCat' => [
-        'template' => 'deleteFoundCatController.php',
-        'seo' => [
-            'title' => 'Supprimer un post',
-            'description' => 'Supprimer un post de chat trouvé',
-        ],
-        'style' => [
-            'common-style.css',
-            'toast.css',
-        ],
-        'scripts' => [
-            'alertManager.js',
-        ],
-    ],
-    'deleteLostCat' => [
-        'template' => 'deleteLostCatController.php',
-        'seo' => [
-            'title' => 'Supprimer un post',
-            'description' => 'Supprimer un post de chat perdu',
-        ],
-        'style' => [
-            'common-style.css',
-            'toast.css',
-        ],
-        'scripts' => [
-            'alertManager.js',
-        ],
-    ],
     'yourposts' => [
         'template' => 'yourpostsController.php',
         'seo' => [

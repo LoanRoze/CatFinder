@@ -2,6 +2,10 @@
 
 require_once('models/connections.php');
 
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+} 
+
 //CREATE
 function new_user($post) {
     if (!empty($post)) {
