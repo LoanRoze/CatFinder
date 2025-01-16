@@ -1,3 +1,3 @@
 <section class="contact">
-  postFoundCat
+  Page Contact
 </section>

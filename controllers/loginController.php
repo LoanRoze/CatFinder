@@ -1,5 +1,4 @@
 <?php
-session_start();
 require_once('./models/loginManager.php');
 require_once('./services/response/response.php');
 require_once('./models/toastManager.php');

@@ -1,5 +1,4 @@
 <?php
-session_start();
 require_once('./models/articleManager.php');
 require_once('./models/loginManager.php');
 

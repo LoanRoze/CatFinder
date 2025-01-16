@@ -7,10 +7,6 @@ require_once('./models/toastManager.php');
 require_once('./services/response/response.php');
 require_once('./models/textSafer.php');
 
-
-
-session_start();
-
 if (!checkIfLoggedInfos()) {
     redirect('login');
 }
