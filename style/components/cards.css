@@ -96,3 +96,8 @@
     margin: 10px 0;
     color: black;
 }
+
+.card-map {
+    height: 90%;
+    width: 90%;
+}

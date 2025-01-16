@@ -105,6 +105,7 @@ const AVAILABLE_ROUTES = [
         ],
         'scripts' => [
             'alertManager.js',
+            'mapManager.js',
             'mapForm.js',
         ],
     ],
