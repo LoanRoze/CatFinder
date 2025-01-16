@@ -1,6 +1,5 @@
 <?php
     require_once('./models/loginManager.php');
-    session_start();
 ?>
 <script src="../script/profilpopupManager.js" defer></script>
 <header>
