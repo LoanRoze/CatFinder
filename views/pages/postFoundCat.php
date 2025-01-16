@@ -1,15 +1,4 @@
-<!DOCTYPE html>
-<html lang="fr">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet">
-</head>
-
-<body>
-
+<section class="postFoundCat">
     <div class="container">
         <form action="" method="POST" class="form-Ajout" enctype="multipart/form-data">
             <div class="form-group">
@@ -36,7 +25,5 @@
             <input type="submit" value="Poster" class="btn">
         </form>
     </div>
-    <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
-</body>
+</section>
 
-</html>
