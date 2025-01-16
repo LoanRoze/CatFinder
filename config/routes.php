@@ -27,6 +27,7 @@ const AVAILABLE_ROUTES = [
         ],
         'scripts' => [
             'popupManager.js',
+            'mapManager.js',
         ],
     ],
     'login' => [
@@ -42,7 +43,6 @@ const AVAILABLE_ROUTES = [
         ],
         'scripts' => [
             'alertManager.js',
-            'mapManager.js'
         ],
     ],
     'register' => [
@@ -110,7 +110,7 @@ const AVAILABLE_ROUTES = [
         ],
         'scripts' => [
             'alertManager.js',
-            'mapManager.js',
+            'mapForm.js',
         ],
     ],
     'postLostCat' => [

@@ -1,6 +1,7 @@
 <section class="foundCats">
     <div class="found-cats">
         <?php foreach ($AllFoundPosts as $article) { ?>
+            <?php createMap($article["id"],$article["latitude"], $article["longitude"]) ?>
             <div class="card">
                 <img class="image-article" src="<?= $article["image_url"] ?>" alt="Image de l'article">
                 <div class="card-content">
@@ -11,7 +12,7 @@
                     <button class="openPopup">Localisation 🌍</button>
                     <div class="popup-overlay">
                         <div class="popup">
-                            <div id="map"></div>
+                            <div id="<?=$article["id"]?>"></div>
                             <button class="goMaps">Itinéraire 📍</button>
                             <br>
                             <button class="closePopup">Fermer ❌</button>
