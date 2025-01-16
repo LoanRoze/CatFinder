@@ -75,11 +75,10 @@ footer li {
 }
 
 #map {
-  height: 400px;
-  width: 100%;
-  border: 1px solid #ccc;
-  border-radius: 8px;
+  min-height: 150px;
+  border: 1px solid white;
   margin-bottom: 20px;
+  border-radius: 8px;
 }
 
 .navbar {
@@ -149,6 +148,10 @@ footer li {
 
 div.nav-link.profilButton:hover {
   cursor: pointer;
+}
+
+div.form-group.coordinate {
+  display: none;
 }
 
 /* Media pour tablette */

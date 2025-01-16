@@ -7,7 +7,6 @@ use Dotenv\Dotenv;
 $dotenv = Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 
-// Définir les constantes
 define('DB_HOST', '7.tcp.eu.ngrok.io');
 define('DB_PORT', 18680);
 define('DB_DATABASE', $_ENV['DB_DATABASE']);
