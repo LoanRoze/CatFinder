@@ -9,12 +9,11 @@
 </head>
 
 <body>
-    <div class="background">
+    <!-- <div class="background">
         <div class="shape"></div>
         <div class="shape"></div>
-    </div>
+    </div> -->
     <form action="" method="POST" class="form-Ajout" enctype="multipart/form-data">
-        <h3>J'ai perdu mon chat</h3>
         <div class="form-group">
             <label id="imagelabel" for="image">Une photo du chat</label>
             <input id="fileuploader" type="file" id="image" name="image" class="form-control">
