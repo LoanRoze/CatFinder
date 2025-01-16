@@ -10,6 +10,7 @@ const AVAILABLE_ROUTES = [
         'style' => [
             'common-style.css',
             'lostCat.css',
+            'cards.css',
         ],
         'scripts' => [
             'contactpopupManager.js',
@@ -23,7 +24,8 @@ const AVAILABLE_ROUTES = [
         ],
         'style' => [
             'common-style.css',
-            'foundCat.css'
+            'foundCat.css',
+            'cards.css',
         ],
         'scripts' => [
             'popupManager.js',
@@ -106,11 +108,13 @@ const AVAILABLE_ROUTES = [
         ],
         'style' => [
             'common-style.css',
+            'postLostCat.css',
             'toast.css',
         ],
         'scripts' => [
             'alertManager.js',
             'mapForm.js',
+            'mapManager.js',
         ],
     ],
     'postLostCat' => [
@@ -137,7 +141,10 @@ const AVAILABLE_ROUTES = [
         ],
         'style' => [
             'common-style.css',
+            'foundCat.css',
+            'lostCat.css',
             'toast.css',
+            'cards.css',
         ],
         'scripts' => [
             'alertManager.js',

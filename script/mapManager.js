@@ -1,4 +1,5 @@
-mapboxgl.accessToken = 'pk.eyJ1IjoicmFwaWRvbGFmbGVjaGUiLCJhIjoiY201b2h6M2pnMGwxdDJrczllZjNmd2V4bCJ9.rJRUuXMWPDwSHiBtfBEqsw';
+mapboxgl.accessToken =
+  "pk.eyJ1IjoicmFwaWRvbGFmbGVjaGUiLCJhIjoiY201b2h6M2pnMGwxdDJrczllZjNmd2V4bCJ9.rJRUuXMWPDwSHiBtfBEqsw";
 
 export function createMap(containerID, longitude, latitude, draggableMarker) {
     const map = new mapboxgl.Map({
@@ -42,4 +43,5 @@ export function placeUserOnMap(map, marker) {
         return false
     }
 }
+
 
