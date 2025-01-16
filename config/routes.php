@@ -8,9 +8,8 @@ const AVAILABLE_ROUTES = [
             'description' => 'Liste des annonces de chats perdus',
         ],
         'style' => [
-            'common-style.css',
-            'lostCat.css',
-            'cards.css',
+            'layouts/lostCat.css',
+            'components/cards.css',
         ],
         'scripts' => [
             'contactpopupManager.js',
@@ -23,13 +22,11 @@ const AVAILABLE_ROUTES = [
             'description' => 'Liste de toutes les annonces de chats trouvés',
         ],
         'style' => [
-            'common-style.css',
-            'foundCat.css',
-            'cards.css',
+            'layouts/foundCat.css',
+            'components/cards.css',
         ],
         'scripts' => [
             'popupManager.js',
-            'mapManager.js',
         ],
     ],
     'login' => [
@@ -39,9 +36,8 @@ const AVAILABLE_ROUTES = [
             'description' => 'Page connexion',
         ],
         'style' => [
-            'common-style.css',
-            'login.css',
-            'toast.css',
+            'layouts/login.css',
+            'components/toast.css',
         ],
         'scripts' => [
             'alertManager.js',
@@ -54,9 +50,8 @@ const AVAILABLE_ROUTES = [
             'description' => 'Page créer un compte',
         ],
         'style' => [
-            'common-style.css',
-            'login.css',
-            'toast.css',
+            'layouts/login.css',
+            'components/toast.css',
         ],
         'scripts' => [
             'alertManager.js',
@@ -69,7 +64,6 @@ const AVAILABLE_ROUTES = [
             'description' => 'Ceci est une description',
         ],
         'style' => [
-            'common-style.css',
         ],
         'scripts' => [
         ],
@@ -81,7 +75,7 @@ const AVAILABLE_ROUTES = [
             'description' => 'Ceci est une description',
         ],
         'style' => [
-            'common-style.css',
+            
         ],
         'scripts' => [
         ],
@@ -92,9 +86,8 @@ const AVAILABLE_ROUTES = [
             'title' => 'Publier une annonce',
         ],
         'style' => [
-            'common-style.css',
-            'postAnnoncement.css',
-            'toast.css',
+            'layouts/postAnnoncement.css',
+            'components/toast.css',
         ],
         'scripts' => [
             'alertManager.js',
@@ -107,14 +100,12 @@ const AVAILABLE_ROUTES = [
             'description' => 'Poster une annonce de chat retrouvé',
         ],
         'style' => [
-            'common-style.css',
-            'postLostCat.css',
-            'toast.css',
+            'layouts/postLostCat.css',
+            'components/toast.css',
         ],
         'scripts' => [
             'alertManager.js',
             'mapForm.js',
-            'mapManager.js',
         ],
     ],
     'postLostCat' => [
@@ -124,9 +115,8 @@ const AVAILABLE_ROUTES = [
             'description' => 'Poster une annonce de chat perdu',
         ],
         'style' => [
-            'common-style.css',
-            'postLostCat.css',
-            'toast.css'
+            'layouts/postLostCat.css',
+            'components/toast.css'
         ],
         'scripts' => [
             'uploadfileManager.js',
@@ -140,11 +130,10 @@ const AVAILABLE_ROUTES = [
             'description' => 'Vos publications',
         ],
         'style' => [
-            'common-style.css',
-            'foundCat.css',
-            'lostCat.css',
-            'toast.css',
-            'cards.css',
+            'layouts/foundCat.css',
+            'layouts/lostCat.css',
+            'components/toast.css',
+            'components/cards.css',
         ],
         'scripts' => [
             'alertManager.js',
