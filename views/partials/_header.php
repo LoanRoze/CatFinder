@@ -21,6 +21,7 @@
         </div>
     </nav>
     <div class="Popup">
+        <div id="closeButton">❌</div>
         <p>
             <?php echo($_SESSION["nom"]) ?>
         </p>
@@ -30,7 +31,7 @@
         <p>
             <?php echo($_SESSION["num_phone"]) ?>
         </p>
-        <button id="closeButton">Fermer</button>
+        <button id="">Vos posts</button>
         <br>
         <br>
         <button id="">Déconnexion</button>

@@ -63,17 +63,6 @@ footer li {
   list-style-type: none;
 }
 
-.container {
-  background-color: white;
-  padding: 20px;
-  margin: 20px auto;
-  border-radius: 8px;
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
-  max-width: 600px;
-  border: 1px solid #ddd;
-  overflow: hidden;
-}
-
 #map {
   min-height: 150px;
   border: 1px solid white;
@@ -152,6 +141,16 @@ div.nav-link.profilButton:hover {
 
 div.form-group.coordinate {
   display: none;
+}
+
+#closeButton {
+  top: 10px;
+  right: 10px;
+  position: absolute;
+}
+
+#closeButton:hover {
+  cursor: pointer;
 }
 
 /* Media pour tablette */
