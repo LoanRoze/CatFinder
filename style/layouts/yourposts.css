@@ -1,0 +1,19 @@
+.user-posts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    background: linear-gradient(to right,
+    #ff512f,
+    #f09819);
+    width: 40%;
+    height: 50px;
+    color: white;
+    border-radius: 15px;
+}

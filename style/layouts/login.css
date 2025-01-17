@@ -143,10 +143,41 @@
 
     /* Media pour tablette */
     @media (max-width: 768px) {
-
+        .background .shape {
+            height: 100px;
+            width: 100px;
+            position: absolute;
+            border-radius: 50%;
+        }
+        .shape:first-child {
+            left: -50px;
+            top: -50px;
+        }
+    
+        .shape:last-child {
+            right: -30px;
+            bottom: -50px;
+        }
     }
     
     /* Media pour petit téléphone */
     @media (max-width: 480px) { 
-
+        form {
+            top: 55%;
+        }
+        .background .shape {
+            height: 100px;
+            width: 100px;
+            position: absolute;
+            border-radius: 50%;
+        }
+        .shape:first-child {
+            left: -50px;
+            top: -20px;
+        }
+    
+        .shape:last-child {
+            right: -30px;
+            bottom: -80px;
+        }
     }

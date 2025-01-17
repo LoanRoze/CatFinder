@@ -24,8 +24,7 @@ section {
 
 header {
   padding: 10px 2vw;
-  width: 64.5%;
-  align-self: center;
+  width: 100%;
 }
 
 main {
@@ -103,7 +102,7 @@ footer li {
 .Popup {
   display: none;
   position: fixed;
-  top: 27%;
+  top: 24%;
   left: 71.5%;
   transform: translate(-50%, -50%);
   background-color: rgba(0, 0, 0, 0.800);
@@ -161,6 +160,21 @@ div.form-group.coordinate {
     border-radius: 8px;
     font-size: 10px;
   }
+  .Popup {
+    top: 22%;
+    left: 67%;
+    width: 150px;
+    height: 180px;
+  }
+  .Popup p {
+    font-size: 10px;
+  }
+  .Popup button {
+    font-size: 10px;
+    height: 25px;
+    width: 100%;
+    border-radius: 5px;
+  }
 }
 
 /* Media pour petit téléphone */
@@ -171,6 +185,20 @@ div.form-group.coordinate {
     font-size: 8px;
   }
   header {
-    width: 80%;
+    /* width: 80%; */
+  }
+  .Popup {
+    top: 20%;
+    left: 67%;
+    width: 130px;
+    height: 160px;
+  }
+  .Popup p {
+    font-size: 8px;
+  }
+  .Popup button {
+    font-size: 6px;
+    height: 15px;
+    border-radius: 3px;
   }
 }

@@ -1,6 +1,6 @@
 <section class="user-posts">
 
-    Chats perdus :
+    <div class="title">Vos chats perdus</div>
     <div class="lost-cats">
         <?php foreach ($AllLostPosts as $article) { ?>
         <div class="card">
@@ -23,7 +23,7 @@
         <?php } ?>
     </div>
 
-    Chats trouvés :
+    <div class="title">Vos chats trouvés</div>
     <div class="found-cats">
         <?php foreach ($AllFoundPosts as $article) { ?>
         <div class="card">
