@@ -1,7 +1,7 @@
 <section class="foundCats">
     <div class="found-cats">
         <?php foreach ($AllFoundPosts as $article) { ?>
-            <?php createMap('card-' . $article["id"],$article["latitude"], $article["longitude"]) ?>
+            <?php createMap('card-' . $article["id"],$article["longitude"], $article["latitude"]) ?>
             <div class="card">
                 <img class="image-article" src="<?= $article["image_url"] ?>" alt="Image de l'article">
                 <div class="card-content">
