@@ -34,7 +34,8 @@
         <a href="index.php?page=yourposts">
             <button id="">Vos posts</button>
         </a>
-        <button id="">Déconnexion</button>
+        
+        <button onclick="window.location.href = 'index.php?page=login&action=deconnexion'">Déconnexion</button>
     </div>
     <?php } ?>
 </header>
