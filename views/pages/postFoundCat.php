@@ -2,7 +2,7 @@
     <form action="" method="POST" class="form-Ajout" enctype="multipart/form-data">
         <div class="form-group">
             <label id="imagelabel" for="image">Une photo du chat</label>
-            <input id="fileuploader" type="file" id="image" name="image" class="form-control">
+            <input id="fileuploader" type="file" accept="image/*" id="image" name="image" class="form-control">
             <div id="fileuploaderinput"></div>
         </div>
         <br>
