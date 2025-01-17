@@ -16,7 +16,8 @@
     <?php } ?>
 
     <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js" defer></script>
-    
+    <script src="script/profilpopupManager.js" defer></script>
+
     <?php foreach ($scripts as $script) { ?>
         <script src="script/<?=$script?>" defer></script>
     <?php } ?>

@@ -1,7 +1,6 @@
 <?php
     require_once('./models/loginManager.php');
 ?>
-<script src="../script/profilpopupManager.js" defer></script>
 <header>
     <nav class="navbar">
         <div class="nav-left">
@@ -21,7 +20,7 @@
         </div>
     </nav>
     <?php if(checkIfLoggedInfos()) { ?>
-    <div class="Popup">
+    <div class="popup-profil">
         <div id="closeButton">❌</div>
         <p>
             <?php echo($_SESSION["nom"]) ?>

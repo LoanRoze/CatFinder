@@ -1,13 +1,11 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const popup = document.querySelector(".Popup");
-  const closeButton = document.querySelector("#closeButton");
-  const profilButton = document.querySelector(".profilButton");
+const popup = document.querySelector(".popup-profil");
+const closeButton = document.querySelector("#closeButton");
+const profilButton = document.querySelector(".profilButton");
 
-  profilButton.addEventListener("click", function () {
-    popup.style.display = "block";
-  });
+profilButton.addEventListener("click", function () {
+  popup.style.display = "block";
+});
 
-  closeButton.addEventListener("click", function () {
-    popup.style.display = "none";
-  });
+closeButton.addEventListener("click", function () {
+  popup.style.display = "none";
 });
