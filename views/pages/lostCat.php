@@ -11,7 +11,7 @@
                     <button id="contacter">Contacter 📞</button>
                     <div class="popup-overlay">
                         <div class="popup">
-                            <div>Email :</div>
+                            <div>Email :<?= getUser($article["id"])?></div>
                             <div>Telephone :</div>
                             <button class="closePopup">Fermer ❌</button>
                         </div>
