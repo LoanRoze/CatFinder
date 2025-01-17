@@ -99,7 +99,7 @@ footer li {
   display: flex;
 }
 
-.Popup {
+.popup-profil {
   display: none;
   position: fixed;
   top: 24%;
@@ -114,7 +114,7 @@ footer li {
   width: 200px;
 }
 
-.Popup button {
+.popup-profil button {
   align-items: center;
   background-color: #ffffff;
   color: black;
@@ -127,7 +127,7 @@ footer li {
   border: 1px transparent;
 }
 
-.Popup button:hover {
+.popup-profil button:hover {
   background: linear-gradient(to right,
           #ff512f,
           #f09819);
@@ -164,16 +164,16 @@ div.form-group.coordinate {
     border-radius: 8px;
     font-size: 10px;
   }
-  .Popup {
+  .popup-profil {
     top: 22%;
     left: 67%;
     width: 150px;
     height: 180px;
   }
-  .Popup p {
+  .popup-profil p {
     font-size: 10px;
   }
-  .Popup button {
+  .popup-profil button {
     font-size: 10px;
     height: 25px;
     width: 100%;
@@ -191,16 +191,16 @@ div.form-group.coordinate {
   header {
     /* width: 80%; */
   }
-  .Popup {
+  .popup-profil {
     top: 20%;
     left: 67%;
     width: 130px;
     height: 160px;
   }
-  .Popup p {
+  .popup-profil p {
     font-size: 8px;
   }
-  .Popup button {
+  .popup-profil button {
     font-size: 6px;
     height: 15px;
     border-radius: 3px;
