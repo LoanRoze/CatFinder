@@ -1,5 +1,4 @@
 <section class="postLostCat">
-
     <form action="" method="POST" class="form-Ajout" enctype="multipart/form-data">
         <div class="form-group">
             <label id="imagelabel" for="image">Une photo du chat</label>
@@ -22,4 +21,3 @@
         <input type="submit" value="Poster" class="btn">
     </form>
 </section>
-

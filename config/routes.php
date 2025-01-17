@@ -134,6 +134,7 @@ const AVAILABLE_ROUTES = [
         'style' => [
             'layouts/foundCat.css',
             'layouts/lostCat.css',
+            'layouts/yourposts.css',
             'components/toast.css',
             'components/cards.css',
         ],

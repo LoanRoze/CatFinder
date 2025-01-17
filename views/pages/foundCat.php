@@ -17,9 +17,9 @@
                             <br>
                             <button class="closePopup">Fermer ❌</button>
                         </div>
-                    </div>
                 </div>
             </div>
+        </div>
         <?php } ?>
     </div>
 </section>

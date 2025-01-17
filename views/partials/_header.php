@@ -21,21 +21,21 @@
         </div>
     </nav>
     <?php if(checkIfLoggedInfos()) { ?>
-        <div class="Popup">
-            <div id="closeButton">❌</div>
-            <p>
-                <?php echo($_SESSION["nom"]) ?>
-            </p>
-            <p>
-                <?php echo($_SESSION["email"]) ?>
-            </p>
-            <p>
-                <?php echo($_SESSION["num_phone"]) ?>
-            </p>
+    <div class="Popup">
+        <div id="closeButton">❌</div>
+        <p>
+            <?php echo($_SESSION["nom"]) ?>
+        </p>
+        <p>
+            <?php echo($_SESSION["email"]) ?>
+        </p>
+        <p>
+            <?php echo($_SESSION["num_phone"]) ?>
+        </p>
+        <a href="index.php?page=yourposts">
             <button id="">Vos posts</button>
-            <br>
-            <br>
-            <button id="">Déconnexion</button>
-        </div>
+        </a>
+        <button id="">Déconnexion</button>
+    </div>
     <?php } ?>
 </header>
