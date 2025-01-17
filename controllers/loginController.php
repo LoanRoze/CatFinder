@@ -3,9 +3,14 @@ require_once('./models/loginManager.php');
 require_once('./services/response/response.php');
 require_once('./models/toastManager.php');
 
+if (isset($_GET['action']) && $_GET['action'] === 'deconnexion') {
+    userDeconnexion();
+    redirect('login');
+}
 if (checkIfLoggedInfos()) {
     redirect('');
 }
+
 
 if (
     !empty($_POST["nom"]) &&

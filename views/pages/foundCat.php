@@ -13,7 +13,9 @@
                     <div class="popup-overlay">
                         <div class="popup">
                             <div id="<?= 'card-' . $article["id"]?>" class="card-map"></div>
-                            <button class="goMaps">Itinéraire 📍</button>
+                            <button class="goMaps">
+                                <a href="https://www.google.com/maps/dir/?api=1&destination=<?= $article["latitude"] ?>,<?= $article["longitude"] ?>">Itinéraire 📍</a>
+                            </button>
                             <br>
                             <button class="closePopup">Fermer ❌</button>
                         </div>

@@ -26,7 +26,7 @@
             <input type="password" placeholder="Mot de passe" name="password" id="password">
         </div>
 
-        <input class="button" type="submit" value="Poster" class="btn">
+        <input class="button" type="submit" value="Créer un compte" class="btn">
     </form>
 </section>
 
