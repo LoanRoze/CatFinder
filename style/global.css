@@ -134,6 +134,10 @@ footer li {
           color: white;
 }
 
+/* .mapboxgl-ctrl-bottom-left, .mapboxgl-ctrl-bottom-right {
+  display: none;
+} */
+
 div.nav-link.profilButton:hover {
   cursor: pointer;
 }
