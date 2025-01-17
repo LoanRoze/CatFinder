@@ -7,7 +7,7 @@
                     <img src="./assets/good.png" alt="Chat trouvé" />
                 </div>
                 <div class="card-content">
-                    J'ai trouvé un chat
+                    CHAT TROUVÉ
                 </div>
             </div>
         </a>
@@ -17,7 +17,7 @@
                     <img id="imgcat" src="./assets/notgood.png" alt="Chat perdu" />
                 </div>
                 <div class="card-content">
-                    J'ai perdu mon chat
+                    CHAT PERDU
                 </div>
             </div>
         </a>
