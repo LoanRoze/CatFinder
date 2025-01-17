@@ -7,7 +7,8 @@
     align-items: center;
     justify-content: center;
     align-self: center;
-    font-size: 25px;
+    font-size: 100%;
+    font-weight: 600;
     background: linear-gradient(to right,
     #ff512f,
     #f09819);
