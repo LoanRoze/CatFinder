@@ -149,9 +149,9 @@ body {
 }
 
 @media (max-width: 480px) {
-    .lost-cats {
+    /* .lost-cats {
         grid-template-columns: 1fr;
-    }
+    } */
 
     .card img {
         height: 180px;
