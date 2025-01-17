@@ -170,7 +170,7 @@ function getFoundCat(int $id): array {
 function getLostCatOfUser(int $userid): array {
     $mysqli = dbConnect();
 
-    $sql = "SELECT * FROM PostLostCat WHERE id_utilisateur = ?";
+    $sql = "SELECT * FROM PostLostCat WHERE id_utilisateur = ? ORDER BY id DESC";
     $stmt = $mysqli->prepare($sql);
     
     if ($stmt === false) {
@@ -196,7 +196,7 @@ function getLostCatOfUser(int $userid): array {
 function getFoundCatOfUser(int $userid): array {
     $mysqli = dbConnect();
 
-    $sql = "SELECT * FROM PostFoundCat WHERE id_utilisateur = ?";
+    $sql = "SELECT * FROM PostFoundCat WHERE id_utilisateur = ? ORDER BY id DESC";
     $stmt = $mysqli->prepare($sql);
     
     if ($stmt === false) {
