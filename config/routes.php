@@ -104,6 +104,7 @@ const AVAILABLE_ROUTES = [
             'components/toast.css',
         ],
         'scripts' => [
+            'uploadfileManager.js',
             'alertManager.js',
             'mapManager.js',
             'mapForm.js',
