@@ -4,7 +4,7 @@ const AVAILABLE_ROUTES = [
     'lostCat' => [
         'template' => 'lostCatController.php',
         'seo' => [
-            'title' => 'Chats Perdus',
+            'title' => 'CatFinder - Chats perdus',
             'description' => 'Liste des annonces de chats perdus',
         ],
         'style' => [
@@ -18,7 +18,7 @@ const AVAILABLE_ROUTES = [
     'foundCat' => [
         'template' => 'foundCatController.php',
         'seo' => [
-            'title' => 'Chats Trouvés',
+            'title' => 'CatFinder - Chats trouvés',
             'description' => 'Liste de toutes les annonces de chats trouvés',
         ],
         'style' => [
@@ -60,7 +60,7 @@ const AVAILABLE_ROUTES = [
     'legal-mentions' => [
         'template' => 'legalMentionsController.php',
         'seo' => [
-            'title' => 'Mentions legales',
+            'title' => 'Mentions légales',
             'description' => 'Ceci est une description',
         ],
         'style' => [
@@ -83,7 +83,7 @@ const AVAILABLE_ROUTES = [
     'postAnnoncement' => [
         'template' => 'postAnnoncementController.php',
         'seo' => [
-            'title' => 'Publier une annonce',
+            'title' => 'Poster une annonce',
         ],
         'style' => [
             'layouts/postAnnoncement.css',
@@ -128,8 +128,8 @@ const AVAILABLE_ROUTES = [
     'yourposts' => [
         'template' => 'yourpostsController.php',
         'seo' => [
-            'title' => 'Vos Publications',
-            'description' => 'Vos publications',
+            'title' => 'CatFinder - Vos posts',
+            'description' => 'Vos posts',
         ],
         'style' => [
             'layouts/foundCat.css',
