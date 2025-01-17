@@ -154,3 +154,14 @@
                 #f09819);
                 color: white;
     }
+
+    /* Media pour tablette */
+@media (max-width: 768px) {
+    form {
+        top: 55%;
+    }
+  }
+  
+  /* Media pour petit téléphone */
+  @media (max-width: 480px) { 
+  }
