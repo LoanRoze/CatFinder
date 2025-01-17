@@ -25,16 +25,13 @@
         <p>
             <?php echo($_SESSION["nom"]) ?>
         </p>
-        <p>
-            <?php echo($_SESSION["email"]) ?>
-        </p>
+        <p class="email-container"><?php echo($_SESSION["email"]) ?></p>
         <p>
             <?php echo($_SESSION["num_phone"]) ?>
         </p>
         <a href="index.php?page=yourposts">
             <button id="">Vos posts</button>
-        </a>
-        
+        </a>    
         <button onclick="window.location.href = 'index.php?page=login&action=deconnexion'">Déconnexion</button>
     </div>
     <?php } ?>

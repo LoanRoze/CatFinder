@@ -101,9 +101,10 @@ footer li {
 
 .popup-profil {
   display: none;
-  position: fixed;
+  position: absolute;
   top: 24%;
-  left: 71.5%;
+  /* left: 71.5%; */
+  right: 0;
   transform: translate(-50%, -50%);
   background-color: rgba(0, 0, 0, 0.800);
   color: white;
@@ -111,7 +112,7 @@ footer li {
   border-radius: 10px;
   text-align: center;
   z-index: 1000;
-  width: 200px;
+  width: 230px;
 }
 
 .popup-profil button {
@@ -134,10 +135,6 @@ footer li {
           color: white;
 }
 
-/* .mapboxgl-ctrl-bottom-left, .mapboxgl-ctrl-bottom-right {
-  display: none;
-} */
-
 div.nav-link.profilButton:hover {
   cursor: pointer;
 }
@@ -152,9 +149,18 @@ div.form-group.coordinate {
   position: absolute;
 }
 
-#closeButton:hover {
+#closeButton:hover { 
   cursor: pointer;
 }
+
+#decobutton {
+  margin-top: 15px;
+}
+
+/* .email-container {
+  max-width: 100%;
+  border: 1px solid black;
+}  */
 
 /* Media pour tablette */
 @media (max-width: 768px) {
@@ -166,7 +172,7 @@ div.form-group.coordinate {
   }
   .popup-profil {
     top: 22%;
-    left: 67%;
+    /* left: 67%; */
     width: 150px;
     height: 180px;
   }
@@ -179,6 +185,9 @@ div.form-group.coordinate {
     width: 100%;
     border-radius: 5px;
   }
+  #decobutton {
+    margin-top: 0px;
+  }
 }
 
 /* Media pour petit téléphone */
@@ -188,12 +197,9 @@ div.form-group.coordinate {
     border-radius: 5px;
     font-size: 8px;
   }
-  header {
-    /* width: 80%; */
-  }
   .popup-profil {
     top: 20%;
-    left: 67%;
+    /* left: 67%; */
     width: 130px;
     height: 160px;
   }
@@ -204,5 +210,9 @@ div.form-group.coordinate {
     font-size: 6px;
     height: 15px;
     border-radius: 3px;
+  }
+
+  #decobutton {
+    margin-top: 0px;
   }
 }
