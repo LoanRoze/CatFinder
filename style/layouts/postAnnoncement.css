@@ -2,9 +2,7 @@ body {
     margin: 0;
     display: flex;
     justify-content: center;
-    height: 100vh;
     flex-direction: column;
-    text-align: center;
 }
 
 h1 {
@@ -18,34 +16,44 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2%;
+    gap: 5%;
     flex-wrap: wrap;
 }
 
 .card {
     position: relative;
     padding: 20px;
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 120px;
     border-radius: 12px;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
+    background: linear-gradient(#ff512f,
+                #f09819);
     transform: perspective(1500px) rotateX(0deg);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: white;
 }
 
 .card:hover {
     transform: perspective(1500px) rotateX(15deg);
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(to right,
+                #ff512f,
+                #f09819);
+    .card-content {
+        opacity: 0;
+    }
 }
 
 .card-content {
     font-size: 20px;
-    color: #333;
     z-index: 10;
+    text-decoration: none !important;
 }
 
 .card-image {
@@ -71,30 +79,30 @@ h1 {
 
 @media (max-width: 768px) {
     .card {
-        width: 250px;
-        height: 200px;
+        width: 170px;
+        height: 80px;
     }
 
     .card-content {
-        font-size: 18px;
+        font-size: 14px;
     }
 }
 
 @media (max-width: 480px) {
     .card {
-        width: 200px;
-        height: 200px;
+        width: 110px;
+        height: 60px;
     }
 
     .card-content {
-        font-size: 16px;
+        font-size: 9px;
     }
 
     h1 {
-        font-size: 18px;
+        font-size: 8px;
     }
 }
 
-a {
+a:hover {
     text-decoration: none;
 }
