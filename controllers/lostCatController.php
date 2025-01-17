@@ -2,6 +2,6 @@
 require('./models/articleManager.php');
 require('./models/loginManager.php');
 
-$AllLostPosts = getLastLostCats(6);
+$AllLostPosts = getLostCats();
 
 $template = 'views/pages/lostCat.php';
